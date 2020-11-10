@@ -82,7 +82,7 @@ screen and (min-resolution: 3dppx) {
 //index: 본문3
 .bestItem {
     min-height: 600px;margin-top: 80px;
-    > h3 {font-family: HvNenuBlk;font-size: 6.111111111111111vw;line-height: 7.222222222222222vw;}
+    > h3 {font-family: HvNenuBlk;font-size: 6.111111111111111vw;line-height: 7.222222222222222vw;padding-bottom: 11.8px;}
     > .swiper-container {
         height: 463px; margin: 0 -15px;background-color: #E2E2E2;
         > .swiper-wrapper {
@@ -91,7 +91,7 @@ screen and (min-resolution: 3dppx) {
                 @include transition(transform 0.5s);
                 width: 80%; 
                 /* display: table; */
-                > img {width: 73.61111111111111vw;padding-top: 9.375vh;}
+                > img {/* width: 73.61111111111111vw; */padding-top: 9.375vh;}
                 /* > img {display: table-cell;vertical-align: middle;} */
                 > p {font-size: 14px; padding: 7px 0 0;}
                 > p+p {margin-bottom: 15px;}
@@ -114,38 +114,45 @@ screen and (min-resolution: 3dppx) {
     > h3 { padding: 0 0 31.5px 23px;}
     .swiper-slide {
         position: relative;height: 405px; width: 255px;margin: 0 60px 0 35px; 
-        > h4 {
+        h4 {
             @include transform(rotate(90deg));
-            position: absolute; font-family: HvNenuBdExo; font-size: 54px; line-height: 58px; color: #000; top: 120px; left: 58px;
+            position: absolute; font-family: HvNenuBdExo; font-size: 54px; line-height: 58px; color: #333; 
         }
         > img {
+            
             /* @include transition 회전 효과*/
             @include transition(all 1.5s);
-            position: absolute; width: 374px; height: 374px;top: 82px; left: -74px;
+            position: absolute; top: 145px; left: -40px;max-width: none;
             &:hover, &:focus {
                 /* @include transform(rotate(360deg)); */
-                @include transform(scale(0.8) rotateZ(360deg));
+                @include transform(scale(1) rotateZ(360deg));
             }
-
         }
     }
     .swiper-slide:nth-child(1) {
       background-color: #1EFE69;
+      h4 {top: 120px; left: 58px;}
+
     }
     .swiper-slide:nth-child(2) {
       background-color: #BC00FF;
+      h4 {top: 54px; left: 123px;}
     }
     .swiper-slide:nth-child(3) {
       background-color: #0D5743;
+      h4 {top: 115px; left: 65px;}
     }
     .swiper-slide:nth-child(4) {
       background-color: #3787D6;
+      h4 {top: 86px; left: 92px;}
     }
     .swiper-slide:nth-child(5) {
       background-color: #FF5700;
+      h4 {top: 100px; left: 140px;}
     }
     .swiper-slide:nth-child(6) {
       background-color: #E3FF24;
+      h4 {top: 56px; left: 183px;}
     }
     .swiper-button-prev,
     .swiper-button-next {display: none;}
@@ -185,49 +192,49 @@ screen and (min-resolution: 3dppx) {
 screen and (-webkit-min-device-pixel-ratio: 2),
 screen and (min-resolution: 192dpi),
 screen and (min-resolution: 2dppx) {
-    ::before {background-image: url("../img/main/lookbook_1_2x.png");}
+    .lk_slide1::before {background-image: url("../img/main/lookbook_1_2x.png");}
 }
 @media 
 screen and (-webkit-min-device-pixel-ratio: 3),
 screen and (min-resolution: 288dpi),
 screen and (min-resolution: 3dppx) {
-    ::before {background-image: url("../img/main/lookbook_1_3x.png");}
+    .lk_slide1::before {background-image: url("../img/main/lookbook_1_3x.png");}
 }
 @media 
 screen and (-webkit-min-device-pixel-ratio: 2),
 screen and (min-resolution: 192dpi),
 screen and (min-resolution: 2dppx) {
-    ::before {background-image: url("../img/main/lookbook_2_2x.png");}
+    .lk_slide2::before {background-image: url("../img/main/lookbook_2_2x.png");}
 }
 @media 
 screen and (-webkit-min-device-pixel-ratio: 3),
 screen and (min-resolution: 288dpi),
 screen and (min-resolution: 3dppx) {
-    ::before {background-image: url("../img/main/lookbook_2_3x.png");}
+    .lk_slide2::before {background-image: url("../img/main/lookbook_2_3x.png");}
 }
 @media 
 screen and (-webkit-min-device-pixel-ratio: 2),
 screen and (min-resolution: 192dpi),
 screen and (min-resolution: 2dppx) {
-    ::before {background-image: url("../img/main/lookbook_3_2x.png");}
+    .lk_slide3::before {background-image: url("../img/main/lookbook_3_2x.png");}
 }
 @media 
 screen and (-webkit-min-device-pixel-ratio: 3),
 screen and (min-resolution: 288dpi),
 screen and (min-resolution: 3dppx) {
-    ::before {background-image: url("../img/main/lookbook_3_3x.png");}
+    .lk_slide3::before {background-image: url("../img/main/lookbook_3_3x.png");}
 }
 @media 
 screen and (-webkit-min-device-pixel-ratio: 2),
 screen and (min-resolution: 192dpi),
 screen and (min-resolution: 2dppx) {
-    ::before {background-image: url("../img/main/lookbook_4_2x.png");}
+    .lk_slide4::before {background-image: url("../img/main/lookbook_4_2x.png");}
 }
 @media 
 screen and (-webkit-min-device-pixel-ratio: 3),
 screen and (min-resolution: 288dpi),
 screen and (min-resolution: 3dppx) {
-    ::before {background-image: url("../img/main/lookbook_4_3x.png");}
+    .lk_slide4::before {background-image: url("../img/main/lookbook_4_3x.png");}
 }
 
 //index: 본문 6

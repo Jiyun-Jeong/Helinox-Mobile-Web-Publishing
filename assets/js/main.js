@@ -23,7 +23,7 @@ $(document).ready(function () {
       type: 'fraction',
       //clickable: true, //bullet 타입일 경우 버튼 클릭시 이동 가능함
     },
-    spaceBetween: 10,
+    spaceBetween: 5,
     slidesPerView: 'auto',
     centeredSlides: true,
     navigation: {
@@ -44,6 +44,9 @@ $(document).ready(function () {
       el: '.swiper-pagination',
       type: 'bulltes',
     },
+    /* autoplay: {
+      delay: 2300,
+    }, */
     spaceBetween: 30, //각 슬라이더 사이 공간
     slidesPerView: 'auto', //한 화면에 보여질 슬라이더 개수 기본1
     centeredSlides: true, //슬라이더 가운데 중요 슬라이더 위치

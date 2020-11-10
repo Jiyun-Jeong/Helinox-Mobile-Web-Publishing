@@ -118,7 +118,8 @@
   .bestItem > h3 {
     font-family: HvNenuBlk;
     font-size: 6.111111111111111vw;
-    line-height: 7.222222222222222vw; }
+    line-height: 7.222222222222222vw;
+    padding-bottom: 11.8px; }
   .bestItem > .swiper-container {
     height: 463px;
     margin: 0 -15px;
@@ -134,7 +135,7 @@
         /* display: table; */
         /* > img {display: table-cell;vertical-align: middle;} */ }
         .bestItem > .swiper-container > .swiper-wrapper > .swiper-slide > img {
-          width: 73.61111111111111vw;
+          /* width: 73.61111111111111vw; */
           padding-top: 9.375vh; }
         .bestItem > .swiper-container > .swiper-wrapper > .swiper-slide > p {
           font-size: 14px;
@@ -170,16 +171,14 @@
     height: 405px;
     width: 255px;
     margin: 0 60px 0 35px; }
-    .category .swiper-slide > h4 {
+    .category .swiper-slide h4 {
       -webkit-transform: rotate(90deg);
       transform: rotate(90deg);
       position: absolute;
       font-family: HvNenuBdExo;
       font-size: 54px;
       line-height: 58px;
-      color: #000;
-      top: 120px;
-      left: 58px; }
+      color: #333; }
     .category .swiper-slide > img {
       /* @include transition 회전 효과*/
       -webkit-transition: all 1.5s;
@@ -187,26 +186,43 @@
       -o-transition: all 1.5s;
       transition: all 1.5s;
       position: absolute;
-      width: 374px;
-      height: 374px;
-      top: 82px;
-      left: -74px; }
+      top: 145px;
+      left: -40px;
+      max-width: none; }
       .category .swiper-slide > img:hover, .category .swiper-slide > img:focus {
         /* @include transform(rotate(360deg)); */
-        -webkit-transform: scale(0.8) rotateZ(360deg);
-        transform: scale(0.8) rotateZ(360deg); }
+        -webkit-transform: scale(1) rotateZ(360deg);
+        transform: scale(1) rotateZ(360deg); }
   .category .swiper-slide:nth-child(1) {
     background-color: #1EFE69; }
+    .category .swiper-slide:nth-child(1) h4 {
+      top: 120px;
+      left: 58px; }
   .category .swiper-slide:nth-child(2) {
     background-color: #BC00FF; }
+    .category .swiper-slide:nth-child(2) h4 {
+      top: 54px;
+      left: 123px; }
   .category .swiper-slide:nth-child(3) {
     background-color: #0D5743; }
+    .category .swiper-slide:nth-child(3) h4 {
+      top: 115px;
+      left: 65px; }
   .category .swiper-slide:nth-child(4) {
     background-color: #3787D6; }
+    .category .swiper-slide:nth-child(4) h4 {
+      top: 86px;
+      left: 92px; }
   .category .swiper-slide:nth-child(5) {
     background-color: #FF5700; }
+    .category .swiper-slide:nth-child(5) h4 {
+      top: 100px;
+      left: 140px; }
   .category .swiper-slide:nth-child(6) {
     background-color: #E3FF24; }
+    .category .swiper-slide:nth-child(6) h4 {
+      top: 56px;
+      left: 183px; }
   .category .swiper-button-prev,
   .category .swiper-button-next {
     display: none; }
@@ -252,28 +268,28 @@
       top: -2px; }
 
 @media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
-  ::before {
+  .lk_slide1::before {
     background-image: url("../img/main/lookbook_1_2x.png"); } }
 @media screen and (-webkit-min-device-pixel-ratio: 3), screen and (min-resolution: 288dpi), screen and (min-resolution: 3dppx) {
-  ::before {
+  .lk_slide1::before {
     background-image: url("../img/main/lookbook_1_3x.png"); } }
 @media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
-  ::before {
+  .lk_slide2::before {
     background-image: url("../img/main/lookbook_2_2x.png"); } }
 @media screen and (-webkit-min-device-pixel-ratio: 3), screen and (min-resolution: 288dpi), screen and (min-resolution: 3dppx) {
-  ::before {
+  .lk_slide2::before {
     background-image: url("../img/main/lookbook_2_3x.png"); } }
 @media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
-  ::before {
+  .lk_slide3::before {
     background-image: url("../img/main/lookbook_3_2x.png"); } }
 @media screen and (-webkit-min-device-pixel-ratio: 3), screen and (min-resolution: 288dpi), screen and (min-resolution: 3dppx) {
-  ::before {
+  .lk_slide3::before {
     background-image: url("../img/main/lookbook_3_3x.png"); } }
 @media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
-  ::before {
+  .lk_slide4::before {
     background-image: url("../img/main/lookbook_4_2x.png"); } }
 @media screen and (-webkit-min-device-pixel-ratio: 3), screen and (min-resolution: 288dpi), screen and (min-resolution: 3dppx) {
-  ::before {
+  .lk_slide4::before {
     background-image: url("../img/main/lookbook_4_3x.png"); } }
 .main_banner {
   min-height: 600px;

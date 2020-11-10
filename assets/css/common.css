@@ -145,14 +145,15 @@ body {
   height: 27px;
   width: 125px; }
   .logo a {
-    background-color: yellow;
     display: block;
-    height: 27px; }
+    height: 27px;
+    width: 125px; }
   .logo, .logo a img {
     position: absolute; }
   .logo a img {
     top: 0;
-    left: 0; }
+    left: 0;
+    fill: #fff; }
   .logo a img:last-child {
     opacity: 0; }
 
@@ -276,17 +277,17 @@ body {
   transition: all 1s;
   opacity: 0; }
   .fade.up {
-    -webkit-transform: translateY(50px);
-    transform: translateY(50px); }
+    -webkit-transform: translateY(30px);
+    transform: translateY(30px); }
   .fade.down {
-    -webkit-transform: translateY(-50px);
-    transform: translateY(-50px); }
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px); }
   .fade.left {
-    -webkit-transform: translateX(50px);
-    transform: translateX(50px); }
+    -webkit-transform: translateX(30px);
+    transform: translateX(30px); }
   .fade.right {
-    -webkit-transform: translateX(-50px);
-    transform: translateX(-50px); }
+    -webkit-transform: translateX(-30px);
+    transform: translateX(-30px); }
 
 .fade.on {
   opacity: 1; }
@@ -309,7 +310,7 @@ body {
   bottom: 50px;
   text-align: top;
   line-height: 55px;
-  background: #ffffff;
+  background: #fff;
   color: #000;
   opacity: 0;
   z-index: 1300; }
@@ -329,8 +330,8 @@ body {
   #footer .legal a, #footer .cs p {
     font-size: 12px;
     font-weight: 300; }
-  #footer .legal strong, #footer .social strong, #footer .cs strong {
-    margin-bottom: 10px; }
+  #footer strong {
+    margin-bottom: 8px; }
   #footer .legal {
     float: left;
     height: 70px;
@@ -352,12 +353,16 @@ body {
     #footer .social a img {
       width: 30px;
       height: 30px;
-      background: pink; }
+      background: pink;
+      /* fill: #fff; */ }
     #footer .social a + a {
       padding-right: 6px; }
   #footer .cs {
     width: 131px;
+    height: 50px;
     background: blue; }
+    #footer .cs strong {
+      padding-top: 63px; }
     #footer .cs p {
       padding-bottom: 55px; }
   #footer .address {

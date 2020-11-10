@@ -101,10 +101,10 @@ body {font-family: aGothic, 'segoe UI'; font-size: 18px; font-weight: 500;/* cur
     &.load {top: 0;} //부모선택자를 &로 대신함
 }
 .logo {
-    a {background-color: yellow;display: block;height: 27px;}
+    a {display: block;height: 27px;width:125px;}
     &, a img{position: absolute;}
     top: 10px; left: calc(50% - 67.5px);height: 27px; width: 125px;
-    a img {top: 0; left: 0;}
+    a img {top: 0; left: 0;fill: #fff;}
     a img:last-child{opacity: 0;}
 }
 .shopping {
@@ -157,11 +157,11 @@ body {font-family: aGothic, 'segoe UI'; font-size: 18px; font-weight: 500;/* cur
     @include transition(all 1s);
     opacity: 0;
     //수직은 translateY => 기준 아래는 +, 기준 위는 -
-    &.up {@include transform(translateY(50px));}
-    &.down{@include transform(translateY(-50px));}
+    &.up {@include transform(translateY(30px));}
+    &.down{@include transform(translateY(-30px));}
     //수평은 translateX => 기준 오른쪽 +, 기준 왼쪽-
-    &.left {@include transform(translateX(50px));}
-    &.right{@include transform(translateX(-50px));}
+    &.left {@include transform(translateX(30px));}
+    &.right{@include transform(translateX(-30px));}
 }
 .fade.on {
     opacity: 1;
@@ -172,7 +172,7 @@ body {font-family: aGothic, 'segoe UI'; font-size: 18px; font-weight: 500;/* cur
 // Top버튼
 #btnTop {
     @include transition(opacity 0.3s);
-    position: fixed; width: 50px; height: 55px;right: 20px; bottom: 50px; text-align: top;line-height: 55px;background: #ffffff;color: #000 ;opacity: 0;z-index: 1300;}
+    position: fixed; width: 50px; height: 55px;right: 20px; bottom: 50px; text-align: top;line-height: 55px;background: #fff;color: #000 ;opacity: 0;z-index: 1300;}
 #btnTop.active {opacity: 1;}
 
 // Footer
@@ -180,7 +180,7 @@ body {font-family: aGothic, 'segoe UI'; font-size: 18px; font-weight: 500;/* cur
     @include border-box;
     background: #000; height: 440px; color: #fff; padding: 70px 30px 40px;text-align: left;font-size: 14px;
     .legal a, .cs p  {font-size: 12px;font-weight: 300;}
-    .legal strong, .social strong, .cs strong {margin-bottom: 10px;} 
+    strong {margin-bottom: 8px;} 
     .legal {
         float: left;height: 70px;width: 84px;
         a {display: block;height: 12px;width: 131px;}
@@ -190,11 +190,12 @@ body {font-family: aGothic, 'segoe UI'; font-size: 18px; font-weight: 500;/* cur
     .social { 
         float: right; width: 102px; height: 50px; 
         strong {display: block;}
-        a img{width: 30px;height: 30px;background: pink;}
+        a img{width: 30px;height: 30px;background: pink;/* fill: #fff; */}
         a + a {padding-right: 6px;}
     }
     .cs {
-        width: 131px;  background: blue;
+        width: 131px;  height: 50px;background: blue;
+        strong {padding-top: 63px;}
         p {padding-bottom: 55px;}
     }
     .address {
