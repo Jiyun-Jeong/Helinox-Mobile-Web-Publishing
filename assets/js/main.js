@@ -16,21 +16,61 @@ $(document).ready(function () {
   });
   
   //본문3 슬라이더
-  var mySwiper1 = new Swiper('.consulting .swiper-container', {
+  var mySwiper1 = new Swiper('.bestItem .swiper-container', {
+    loop: true,
     pagination: {
       el: '.swiper-pagination',
       type: 'fraction',
       //clickable: true, //bullet 타입일 경우 버튼 클릭시 이동 가능함
     },
+    spaceBetween: 10,
+    slidesPerView: 'auto',
+    centeredSlides: true,
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
+    a11y: {
+      //prevSlideMessage: '이전 슬라이드',
+      //nextSlideMessage: '다음 슬라이드',
+      firstSlideMessage: '첫번째 슬라이드',
+      lastSlideMessage: '마지막 슬라이드',
+    }
   })
 
   //본문4 슬라이더
-  var mySwiper2 = new Swiper('.casestudy .swiper-container', {
-    spaceBetween: 10, //각 슬라이더 사이 공간
+  var mySwiper2 = new Swiper('.category .swiper-container', {
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bulltes',
+    },
+    spaceBetween: 30, //각 슬라이더 사이 공간
+    slidesPerView: 'auto', //한 화면에 보여질 슬라이더 개수 기본1
+    centeredSlides: true, //슬라이더 가운데 중요 슬라이더 위치
+    scrollbar: {
+      el: '.swiper-scrollbar',
+      draggable: true,    //스크롤바를 직접 드래그해서 이동가능
+    },
+    navigation: {
+      prevEl: '.swiper-button-prev',
+    },
+    a11y: {
+      //prevSlideMessage: '이전 슬라이드',
+      //nextSlideMessage: '다음 슬라이드',
+      firstSlideMessage: '첫번째 슬라이드',
+      lastSlideMessage: '마지막 슬라이드',
+    }
+  })
+
+
+//본문5 슬라이더
+  var mySwiper2 = new Swiper('.lookbook .swiper-container', {
+    pagination: {
+      type: 'bullets',
+      bulletElement: 'span',
+      clickable: 'true',
+    },
+    spaceBetween: 20, //각 슬라이더 사이 공간
     slidesPerView: 'auto', //한 화면에 보여질 슬라이더 개수 기본1
     centeredSlides: true, //슬라이더 가운데 중요 슬라이더 위치
     scrollbar: {
@@ -43,5 +83,5 @@ $(document).ready(function () {
       firstSlideMessage: '첫번째 슬라이드',
       lastSlideMessage: '마지막 슬라이드',
     }
-  })
+  });
 });

@@ -93,61 +93,84 @@
       font-weight: 300;
       line-height: 25px;
       padding: 55px 0 50px; }
-    .brandStory .txtwrap .btnwrap {
+    .brandStory .txtwrap .brandBtn {
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
       -webkit-transition: all 0.3s;
       -moz-transition: all 0.3s;
       -o-transition: all 0.3s;
       transition: all 0.3s;
+      display: inline-block;
       font-weight: 500;
       top: 10px;
       width: 190px;
       height: 44px;
       line-height: 44px;
       border: 1px solid #fff; }
-      .brandStory .txtwrap .btnwrap:hover, .brandStory .txtwrap .btnwrap:active {
+      .brandStory .txtwrap .brandBtn:hover, .brandStory .txtwrap .brandBtn:active {
         background-color: #1C98D6;
         color: #000;
         border-color: #1C98D6; }
 
 .bestItem {
-  min-height: 640px; }
+  min-height: 600px;
+  margin-top: 80px; }
   .bestItem > h3 {
     font-family: HvNenuBlk;
-    font-size: 22px;
-    line-height: 26px; }
-  .bestItem .swiper-container {
-    height: 463px; }
-    .bestItem .swiper-container .swiper-wrapper {
-      margin: 0 auto;
-      background-color: #E2E2E2; }
-      .bestItem .swiper-container .swiper-wrapper .swiper-slide {
-        display: table; }
-        .bestItem .swiper-container .swiper-wrapper .swiper-slide img {
-          width: 265px; }
-        .bestItem .swiper-container .swiper-wrapper .swiper-slide > img {
-          display: table-cell;
-          vertical-align: middle; }
-        .bestItem .swiper-container .swiper-wrapper .swiper-slide > p {
+    font-size: 6.111111111111111vw;
+    line-height: 7.222222222222222vw; }
+  .bestItem > .swiper-container {
+    height: 463px;
+    margin: 0 -15px;
+    background-color: #E2E2E2; }
+    .bestItem > .swiper-container > .swiper-wrapper {
+      margin: 0 auto; }
+      .bestItem > .swiper-container > .swiper-wrapper > .swiper-slide {
+        -webkit-transition: transform 0.5s;
+        -moz-transition: transform 0.5s;
+        -o-transition: transform 0.5s;
+        transition: transform 0.5s;
+        width: 80%;
+        /* display: table; */
+        /* > img {display: table-cell;vertical-align: middle;} */ }
+        .bestItem > .swiper-container > .swiper-wrapper > .swiper-slide > img {
+          width: 73.61111111111111vw;
+          padding-top: 9.375vh; }
+        .bestItem > .swiper-container > .swiper-wrapper > .swiper-slide > p {
+          font-size: 14px;
           padding: 7px 0 0; }
-        .bestItem .swiper-container .swiper-wrapper .swiper-slide > p:last-child {
-          padding-bottom: 15px; }
-  .bestItem .swiper-slide > p + p {
-    padding-bottom: 11px; }
+        .bestItem > .swiper-container > .swiper-wrapper > .swiper-slide > p + p {
+          margin-bottom: 15px; }
+        .bestItem > .swiper-container > .swiper-wrapper > .swiper-slide > a {
+          font-family: Helvetica;
+          color: #1C98D6 !important;
+          font-weight: 400; }
+      .bestItem > .swiper-container > .swiper-wrapper > .swiper-slide-prev, .bestItem > .swiper-container > .swiper-wrapper .swiper-slide-next {
+        -webkit-transform: scale(0.9);
+        transform: scale(0.9);
+        opacity: 0.7; }
+      .bestItem > .swiper-container > .swiper-wrapper > .swiper-slide-prev {
+        transform-origin: right center; }
+      .bestItem > .swiper-container > .swiper-wrapper > .swiper-slide-next {
+        transform-origin: left center; }
 
+/* 
+ */
 .category {
+  position: relative;
   min-height: 600px;
   font-family: HvNenuBlk;
-  font-size: 22px;
+  font-size: 6.111111111111111vw;
   text-align: left;
   line-height: 17px; }
-  .category h3 {
-    padding: 0 0 31px 23px; }
+  .category > h3 {
+    padding: 0 0 31.5px 23px; }
   .category .swiper-slide {
     position: relative;
     height: 405px;
     width: 255px;
     margin: 0 60px 0 35px; }
-    .category .swiper-slide h4 {
+    .category .swiper-slide > h4 {
       -webkit-transform: rotate(90deg);
       transform: rotate(90deg);
       position: absolute;
@@ -157,29 +180,41 @@
       color: #000;
       top: 120px;
       left: 58px; }
-    .category .swiper-slide img {
+    .category .swiper-slide > img {
       /* @include transition 회전 효과*/
+      -webkit-transition: all 1.5s;
+      -moz-transition: all 1.5s;
+      -o-transition: all 1.5s;
+      transition: all 1.5s;
       position: absolute;
       width: 374px;
       height: 374px;
       top: 82px;
       left: -74px; }
-  .category div.swiper-slide:nth-child(1) {
+      .category .swiper-slide > img:hover, .category .swiper-slide > img:focus {
+        /* @include transform(rotate(360deg)); */
+        -webkit-transform: scale(0.8) rotateZ(360deg);
+        transform: scale(0.8) rotateZ(360deg); }
+  .category .swiper-slide:nth-child(1) {
     background-color: #1EFE69; }
-  .category div.swiper-slide:nth-child(2) {
+  .category .swiper-slide:nth-child(2) {
     background-color: #BC00FF; }
-  .category div.swiper-slide:nth-child(3) {
+  .category .swiper-slide:nth-child(3) {
     background-color: #0D5743; }
-  .category div.swiper-slide:nth-child(4) {
+  .category .swiper-slide:nth-child(4) {
     background-color: #3787D6; }
-  .category div.category .swiper-slide:nth-child(5) {
+  .category .swiper-slide:nth-child(5) {
     background-color: #FF5700; }
-  .category div.category .swiper-slide:nth-child(6) {
+  .category .swiper-slide:nth-child(6) {
     background-color: #E3FF24; }
-  .category .swiper-pagination .swiper-pagination-bullet {
-    height: 3px;
-    width: 3px;
-    background: #000; }
+  .category .swiper-button-prev,
+  .category .swiper-button-next {
+    display: none; }
+  .category .swiper-pagination {
+    position: absolute;
+    bottom: 0;
+    left: 140px;
+    width: 100%; }
 
 .lookbook {
   min-height: 600px;
@@ -187,16 +222,61 @@
   color: #fff;
   font-family: HvNenuBdOu;
   font-size: 27px;
-  font-weight: 700;
   line-height: 34px; }
+  .lookbook h3 {
+    padding: 20px 0 10.5px; }
+  .lookbook .swiper-slide {
+    position: relative;
+    height: 468px;
+    width: 360px; }
+    .lookbook .swiper-slide button .lk_btn1 {
+      position: absolute;
+      top: 237.5px;
+      left: 112px; }
+  .lookbook .swiper-slide:nth-child(1) {
+    background-image: url("../img/main/lookbook_1_1x.png"); }
+  .lookbook .swiper-slide:nth-child(2) {
+    background-image: url("../img/main/lookbook_2_1x.png"); }
+  .lookbook .swiper-slide:nth-child(3) {
+    background-image: url("../img/main/lookbook_3_1x.png"); }
+  .lookbook .swiper-slide:nth-child(4) {
+    background-image: url("../img/main/lookbook_4_1x.png"); }
   .lookbook .swiper-scrollbar {
     position: static;
-    margin: 40px auto;
-    height: 1px;
-    width: 90%; }
+    height: 3px;
+    width: 100%;
+    z-index: 1500; }
     .lookbook .swiper-scrollbar .swiper-scrollbar-drag {
-      height: 3px;
-      background: #000;
+      height: 10px;
+      background: #1C98D6;
       top: -2px; }
+
+@media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+  ::before {
+    background-image: url("../img/main/lookbook_1_2x.png"); } }
+@media screen and (-webkit-min-device-pixel-ratio: 3), screen and (min-resolution: 288dpi), screen and (min-resolution: 3dppx) {
+  ::before {
+    background-image: url("../img/main/lookbook_1_3x.png"); } }
+@media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+  ::before {
+    background-image: url("../img/main/lookbook_2_2x.png"); } }
+@media screen and (-webkit-min-device-pixel-ratio: 3), screen and (min-resolution: 288dpi), screen and (min-resolution: 3dppx) {
+  ::before {
+    background-image: url("../img/main/lookbook_2_3x.png"); } }
+@media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+  ::before {
+    background-image: url("../img/main/lookbook_3_2x.png"); } }
+@media screen and (-webkit-min-device-pixel-ratio: 3), screen and (min-resolution: 288dpi), screen and (min-resolution: 3dppx) {
+  ::before {
+    background-image: url("../img/main/lookbook_3_3x.png"); } }
+@media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+  ::before {
+    background-image: url("../img/main/lookbook_4_2x.png"); } }
+@media screen and (-webkit-min-device-pixel-ratio: 3), screen and (min-resolution: 288dpi), screen and (min-resolution: 3dppx) {
+  ::before {
+    background-image: url("../img/main/lookbook_4_3x.png"); } }
+.main_banner {
+  min-height: 600px;
+  text-align: left; }
 
 /*# sourceMappingURL=main.css.map */

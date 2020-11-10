@@ -62,7 +62,8 @@ button {
 
 img {
   vertical-align: top;
-  border: none; }
+  border: none;
+  max-width: 100%; }
 
 a:link, a:visited, a:hover, a:active {
   text-decoration: none;
@@ -107,6 +108,9 @@ header, nav, section, footer {
 .font2 {
   font-family: Helvetica; }
 
+.mt_50 {
+  margin-top: 50px; }
+
 body {
   font-family: aGothic, 'segoe UI';
   font-size: 18px;
@@ -140,6 +144,10 @@ body {
   left: calc(50% - 67.5px);
   height: 27px;
   width: 125px; }
+  .logo a {
+    background-color: yellow;
+    display: block;
+    height: 27px; }
   .logo, .logo a img {
     position: absolute; }
   .logo a img {
@@ -210,7 +218,8 @@ body {
   bottom: 0;
   background: #fff;
   color: #000;
-  overflow-y: auto; }
+  overflow-y: auto;
+  text-align: left; }
 
 #gnb > ul {
   padding: 56px 0;
@@ -224,7 +233,7 @@ body {
 #gnb > ul > li > a {
   position: relative;
   font-size: 45px;
-  padding: 15px 40px; }
+  padding: 15px 25px; }
 
 /* 가상요소 */
 #gnb > ul > li:not(.gnb1) > a::before, #gnb > ul > li:not(.gnb1) > a::after {
@@ -302,7 +311,8 @@ body {
   line-height: 55px;
   background: #ffffff;
   color: #000;
-  opacity: 0; }
+  opacity: 0;
+  z-index: 1300; }
 
 #btnTop.active {
   opacity: 1; }

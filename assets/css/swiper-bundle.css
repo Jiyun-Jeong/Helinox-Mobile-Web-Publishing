@@ -532,43 +532,8 @@
     -webkit-backface-visibility: hidden;
             backface-visibility: hidden;
   }
-  /* bestItem */
-  .bestItem .swiper-container {
-    height: 463px;
-  }
-  .bestItem > h3 {
-    font-family: HvNenuBlk;
-    font-size: 22px;
-    line-height: 26px;
-    }
-  .bestItem .swiper-wrapper {
-    background-color: #E2E2E2;
-    }
-  .bestItem .swiper-slide {
-    display: table;
-    }
-  .bestItem .swiper-slide > img {
-    display: table-cell;
-    vertical-align: middle;
-  }
-  .bestItem .swiper-slide > p {
-      padding: 9px 0 0;
-  }
-  .bestItem .swiper-slide > p + p {
-      padding-bottom: 11px;
-  }
-  .bestItem .swiper-slide > a {
-    font-family: Helvetica;
-    color: #1C98D6 !important;
-    font-weight: 400;
-  }
-  /* category */
 
 
-  .category .swiper-button-prev,
-  .category .swiper-button-next {
-      display: none;
-  }
   /* Lookbook */
   .lookbook 
   .lookbook .swiper-scrollbar {

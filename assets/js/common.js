@@ -1,4 +1,3 @@
-//index 1
 $(document).ready(function () {
     var scrollY;
     var timer = 0;
@@ -11,12 +10,12 @@ $(document).ready(function () {
     $('.sub_tit.effect').addClass('effect');
 
     $(window).on('scroll', function () {
-        clearTimeOut(timer);
+        clearTimeout(timer);
 
         timer = setTimeout(function () {
             scrollT = $(this).scrollTop();
 
-            if (scrollT > $('.top_visual').outerHeight() - $('#header'.outerHeight())) $('#header').addClass('bgchange');
+            if (scrollT > $('.top_visual').outerHeight() - $('#header').outerHeight()) $('#header').addClass('bgchange');
             else $('#header').removeClass('bgchange');
             
             $('.fade').each(function () {
