@@ -1,0 +1,202 @@
+@charset "UTF-8";
+.top_visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  overflow: hidden; }
+  .top_visual::before {
+    -webkit-background-size: cover;
+    background-size: cover;
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center; }
+  .top_visual.on::before {
+    -webkit-transform: scale(1);
+    transform: scale(1); }
+  .top_visual .txtwrap {
+    position: relative;
+    text-align: left;
+    color: #fff; }
+    .top_visual .txtwrap > * {
+      -webkit-transition: all 0.3s ease-in-out;
+      -moz-transition: all 0.3s ease-in-out;
+      -o-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
+      opacity: 0; }
+  .top_visual.on .txtwrap > * {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+    opacity: 1; }
+
+.main_visual {
+  min-height: 600px; }
+  .main_visual::before {
+    -webkit-transition: transform 1.5s ease-in-out;
+    -moz-transition: transform 1.5s ease-in-out;
+    -o-transition: transform 1.5s ease-in-out;
+    transition: transform 1.5s ease-in-out;
+    background-image: url("../img/main/bg1_1x.png"); }
+  .main_visual .txtwrap {
+    left: -20.5%;
+    top: -7.8125vh;
+    /* .go_btm {
+        position: absolute; bottom: 50px; left: 50%;
+        @include radius(8px);
+        @include transition(all 0.3s);
+        @include traDelay (0.5s);
+        /* width: 100%;height: 4px;background: #fff;left: 0;
+        .line-left {width: 5px;height: 2px;}
+        .line-right {width: 5px;height: 2px;}
+        &.active {
+            .go_btm {background: #000;}
+            .line_left {
+                @include transform(rotate (45deg));
+            }
+            .line-right {@include transform(rotate (-45deg));}
+        }
+    } */ }
+    .main_visual .txtwrap strong {
+      font-size: 6.666666666666667vw;
+      line-height: 4.84375vh;
+      font-weight: 500; }
+
+@media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+  .main_visual::before {
+    background-image: url("../img/main/bg1_2x.png"); } }
+@media screen and (-webkit-min-device-pixel-ratio: 3), screen and (min-resolution: 288dpi), screen and (min-resolution: 3dppx) {
+  .main_visual::before {
+    background-image: url("../img/main/bg1_3x.png"); } }
+.brandStory {
+  min-height: 700px;
+  position: relative;
+  text-align: center;
+  background: #000;
+  color: #fff; }
+  .brandStory .txtwrap {
+    position: absolute;
+    left: calc(50% - 119px);
+    top: 200px; }
+    .brandStory .txtwrap h3 {
+      font-size: 22px;
+      font-weight: 500;
+      line-height: 29px; }
+    .brandStory .txtwrap p {
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 25px;
+      padding: 55px 0 50px; }
+    .brandStory .txtwrap .btnwrap {
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      transition: all 0.3s;
+      font-weight: 500;
+      top: 10px;
+      width: 190px;
+      height: 44px;
+      line-height: 44px;
+      border: 1px solid #fff; }
+      .brandStory .txtwrap .btnwrap:hover, .brandStory .txtwrap .btnwrap:active {
+        background-color: #1C98D6;
+        color: #000;
+        border-color: #1C98D6; }
+
+.bestItem {
+  min-height: 640px; }
+  .bestItem > h3 {
+    font-family: HvNenuBlk;
+    font-size: 22px;
+    line-height: 26px; }
+  .bestItem .swiper-container {
+    height: 463px; }
+    .bestItem .swiper-container .swiper-wrapper {
+      margin: 0 auto;
+      background-color: #E2E2E2; }
+      .bestItem .swiper-container .swiper-wrapper .swiper-slide {
+        display: table; }
+        .bestItem .swiper-container .swiper-wrapper .swiper-slide img {
+          width: 265px; }
+        .bestItem .swiper-container .swiper-wrapper .swiper-slide > img {
+          display: table-cell;
+          vertical-align: middle; }
+        .bestItem .swiper-container .swiper-wrapper .swiper-slide > p {
+          padding: 7px 0 0; }
+        .bestItem .swiper-container .swiper-wrapper .swiper-slide > p:last-child {
+          padding-bottom: 15px; }
+  .bestItem .swiper-slide > p + p {
+    padding-bottom: 11px; }
+
+.category {
+  min-height: 600px;
+  font-family: HvNenuBlk;
+  font-size: 22px;
+  text-align: left;
+  line-height: 17px; }
+  .category h3 {
+    padding: 0 0 31px 23px; }
+  .category .swiper-slide {
+    position: relative;
+    height: 405px;
+    width: 255px;
+    margin: 0 60px 0 35px; }
+    .category .swiper-slide h4 {
+      -webkit-transform: rotate(90deg);
+      transform: rotate(90deg);
+      position: absolute;
+      font-family: HvNenuBdExo;
+      font-size: 54px;
+      line-height: 58px;
+      color: #000;
+      top: 120px;
+      left: 58px; }
+    .category .swiper-slide img {
+      /* @include transition 회전 효과*/
+      position: absolute;
+      width: 374px;
+      height: 374px;
+      top: 82px;
+      left: -74px; }
+  .category div.swiper-slide:nth-child(1) {
+    background-color: #1EFE69; }
+  .category div.swiper-slide:nth-child(2) {
+    background-color: #BC00FF; }
+  .category div.swiper-slide:nth-child(3) {
+    background-color: #0D5743; }
+  .category div.swiper-slide:nth-child(4) {
+    background-color: #3787D6; }
+  .category div.category .swiper-slide:nth-child(5) {
+    background-color: #FF5700; }
+  .category div.category .swiper-slide:nth-child(6) {
+    background-color: #E3FF24; }
+  .category .swiper-pagination .swiper-pagination-bullet {
+    height: 3px;
+    width: 3px;
+    background: #000; }
+
+.lookbook {
+  min-height: 600px;
+  background: #050505;
+  color: #fff;
+  font-family: HvNenuBdOu;
+  font-size: 27px;
+  font-weight: 700;
+  line-height: 34px; }
+  .lookbook .swiper-scrollbar {
+    position: static;
+    margin: 40px auto;
+    height: 1px;
+    width: 90%; }
+    .lookbook .swiper-scrollbar .swiper-scrollbar-drag {
+      height: 3px;
+      background: #000;
+      top: -2px; }
+
+/*# sourceMappingURL=main.css.map */

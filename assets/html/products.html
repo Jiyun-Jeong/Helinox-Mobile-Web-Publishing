@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="stylesheet" href=""> <!-- 파비콘 -->
+    <link rel="stylesheet" href="assets/css/common.css">
+    <script src="assets/js/common.js"></script>
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+            <h1 class="logo">
+                <a href="index.html" aria-label="헬리녹스">
+                    <img src="assets/img/common/helinox-logo_1x_w.png" alt=""
+                    srcset="assets/img/common/helinox-logo_2x_w.png 2x, assets/img/common/helinox-logo_3x_w.png 3x">
+                    <img src="assets/img/common/helinox-logo_1x.png" alt="" 
+                    srcset="assets/img/common/helinox-logo_2x.png 2x, assets/img/common/helinox-logo_3x.png 3x">
+                </a>
+            </h1>
+            <button class="shopping">
+                <div class="blind-b">장바구니</div>
+                <a href="">
+                    <img src="assets/img/common/shopping-bag_1x_w.png" alt="" srcset="assets/img/common/shopping-bag_2x.png 2x, assets/img/common/shopping-bag_3x.png 3x">
+                    <img src="assets/img/common/shopping-bag_1x.png" alt="" srcset="assets/img/common/shopping-bag_2x.png 2x, assets/img/common/shopping-bag_3x.png 3x">
+                </a>
+            </button>
+            <button class="btn_menu">
+                <div class="blind-b">메뉴 열기</div>
+                <span class="line top"></span>
+                <span class="line mid"></span>
+                <span class="line btm"></span>
+            </button>
+                        <!-- #gnb는 modal 형식을 사용
+                1) 열기 버튼을 클릭하면 #gnb 첫번째 a에 포커스 강제 이동
+                2) 닫기 버튼을 누르기 전까지는 모달 안에서만 포커스가 움직여야함
+                3) 닫기 버튼을 누르면 처음의 위치(열기버튼)로 포커스 강제 이동-->
+        
+        <nav id="gnb" class="font2">
+            <ul>
+                <li class="gnb1">
+                    <a href="" data-link="first">About</a>
+                </li>
+                <li class="gnb2">
+                    <a href="">Product</a>
+                    <ul>
+                        <li><a href="">Outdoor Line</a></li>
+                        <li><a href="">Home Line</a></li>
+                        <li><a href="">Tactical Line</a></li>
+                        <li><a href="">Limited Line</a></li>
+                        <li><a href="">Acc</a></li>
+                    </ul>
+                </li>
+                <li class="gnb3">
+                    <a href="" data-link="last">Contents</a>
+                    <ul>
+                        <li><a href="">EVENT</a></li>
+                        <li><a href="">VIDEO</a></li>
+                        <li><a href="">NEWS</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="content">
+        <h2 class="blind-b">Outline Line 상품</h2>
+        <article class="products">
+            <div class="title">
+                <strong>OUTDOOR LINE</strong>
+            </div>
+            <div class="productsWrap">
+                
+            </div>
+        </article>
+    </section>
+    </div>
+</body>
+</html>

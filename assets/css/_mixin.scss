@@ -1,0 +1,27 @@
+@mixin transition($value...) {
+    -webkit-transition: $value;
+    -moz-transition: $value;
+    -o-transition: $value;
+    transition: $value;
+}
+@mixin transform($value...) {
+    -webkit-transform: $value;
+    transform: $value;
+}
+@mixin border-box {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+@mixin bgsize($value...) {
+    -webkit-background-size: $value;
+    background-size: $value;
+}
+@mixin traDelay($value...) {
+    -webkit-transition-delay: $value !important;
+    -o-transition-delay: $value !important;
+    transition-delay: $value !important;
+}
+@mixin radius($value...) {
+    -webkit-border-radius: $value;
+    border-radius: $value;
+}

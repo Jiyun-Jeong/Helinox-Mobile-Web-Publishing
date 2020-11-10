@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Helinox </title>
+    <link rel="stylesheet" href=""> <!-- 파비콘 -->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.css">
+    <link rel="stylesheet" href="assets/css/common.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <script src="assets/js/jquery-1.12.4.min.js"></script>
+    <script src="assets/js/swiper.min.js"></script>
+    <script src="assets/js/common.js"></script>
+    <script src="assets/js/main.js"></script>
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+            <h1 class="logo">
+                <a href="index.html" aria-label="헬리녹스">
+                    <img src="assets/img/common/helinox-logo_1x_w.png" alt=""
+                    srcset="assets/img/common/helinox-logo_2x_w.png 2x, assets/img/common/helinox-logo_3x_w.png 3x">
+                    <img src="assets/img/common/helinox-logo_1x.png" alt="" 
+                    srcset="assets/img/common/helinox-logo_2x.png 2x, assets/img/common/helinox-logo_3x.png 3x">
+                </a>
+            </h1>
+            <button class="shopping">
+                <div class="blind-b">장바구니</div>
+                <a href="">
+                    <img src="assets/img/common/shopping-bag_1x_w.png" alt="" srcset="assets/img/common/shopping-bag_2x_w.png 2x, assets/img/common/shopping-bag_3x_w.png 3x">
+                    <img src="assets/img/common/shopping-bag_1x.png" alt="" srcset="assets/img/common/shopping-bag_2x.png 2x, assets/img/common/shopping-bag_3x.png 3x">
+                </a>
+            </button>
+            <button class="btn_menu">
+                <div class="blind-b">메뉴 열기</div>
+                <span class="line top"></span>
+                <span class="line mid"></span>
+                <span class="line btm"></span>
+            </button>
+                        <!-- #gnb는 modal 형식을 사용
+                1) 열기 버튼을 클릭하면 #gnb 첫번째 a에 포커스 강제 이동
+                2) 닫기 버튼을 누르기 전까지는 모달 안에서만 포커스가 움직여야함
+                3) 닫기 버튼을 누르면 처음의 위치(열기버튼)로 포커스 강제 이동-->
+        
+        <nav id="gnb" class="font2">
+            <ul>
+                <li class="gnb1">
+                    <a href="" data-link="first">About</a>
+                </li>
+                <li class="gnb2">
+                    <a href="">Product</a>
+                    <ul>
+                        <li><a href="">Outdoor Line</a></li>
+                        <li><a href="">Home Line</a></li>
+                        <li><a href="">Tactical Line</a></li>
+                        <li><a href="">Limited Line</a></li>
+                        <li><a href="">Acc</a></li>
+                    </ul>
+                </li>
+                <li class="gnb3">
+                    <a href="" data-link="last">Contents</a>
+                    <ul>
+                        <li><a href="">EVENT</a></li>
+                        <li><a href="">VIDEO</a></li>
+                        <li><a href="">NEWS</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="content" role="main">
+        <h2 class="blind-b">헬리녹스 이야기</h2>
+        <article class="main_visual top_visual">
+            <div class="txtwrap font1">
+                <strong>언택트를 즐기는<br>우리들의 자세</strong>
+                <button class="go_btm" type="button">
+                    <div class="blind-b">맨 아래로 이동</div>
+                    <span class="line_left"></span>
+                    <span class="line-right"></span>
+                </button>    
+            </div>    
+        </article>
+        
+        <article class="brandStory">
+            <h2 class="blind-b">헬리녹스 소개</h2>
+            <div class="txtwrap">
+                <h3>글로벌 캠핑 브랜드<br>
+                    Helinox</h3>
+                <p>캠핑만은 가볍게 할 수 없을까?<br>
+                    헬리녹스는 여기서부터 시작했습니다.</p>
+                <div class="btnwrap">
+                    <a href="assets/html/about.html" type="button" class="font2">Brand Story</a>
+                </div>
+            </div>
+        </article>
+
+        <article class="bestItem">
+            <h3>Best</h3>
+            <div class="swiper-container"> <!-- 배경화면 회색 #E2E2E2 -->
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="assets/img/main/best_01_chair.jpg" alt="헬리녹스 체어원 / 트라이앵글 그린">
+                        <p>헬리녹스 체어원 / 트라이앵글 그린</p>
+                        <p>125,000원</p>
+                        <a href="assets/html/products.html">View More +</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/img/main/best_02_chair.jpg" alt="헬리녹스 체어제로 / 블랙">
+                        <p>헬리녹스 체어제로 / 블랙</p>
+                        <p>110,000원</p>
+                        <a href="">View More +</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/img/main/best_03_chair.jpg" alt="헬리녹스 체어원 / 블랙">
+                        <p>헬리녹스 체어원 / 블랙</p>
+                        <p>99,000원</p>
+                        <a href="">View More +</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/img/main/best_04_table.jpg" alt="헬리녹스 테이블원 하드탑 / 블랙">
+                        <p>헬리녹스 테이블원 하드탑 / 블랙</p>
+                        <p>130,000원</p>
+                        <a href="">View More +</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/img/main/best_05_coyotetan.jpg" alt="터그 사코슈 스탠다드 #1 / 코요테탄">
+                        <p>터그 사코슈 스탠다드 #1 / 코요테탄</p>
+                        <p>23,000원</p>
+                        <a href="">View More +</a>
+                    </div>
+                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </article>
+
+        <article class="category">
+            <h3>Category</h3>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <h4>OUTDOOR<br>LINE</h4>
+                        <img src="assets/img/main/category01.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <h4>HOME<br>LINE</h4>
+                        <img src="assets/img/main/category02.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <h4>TACTICAL<br>LINE</h4>
+                        <img src="assets/img/main/category03.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <h4>LIMITED<br>LINE</h4>
+                        <img src="assets/img/main/category04.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <h4>T.E.R.G</h4>
+                        <img src="assets/img/main/category05.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <h4>ACC</h4>
+                        <img src="assets/img/main/category06.png" alt="">
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+        </div>
+        </article>
+
+        <article class="lookbook">
+            <h3>Lookbook</h3>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">Slide 1
+                        <button></button>
+                        <button></button>
+                    </div>
+                    <div class="swiper-slide">Slide 2
+                        <button></button>
+                        <button></button>
+                    </div>
+                    <div class="swiper-slide">Slide 3
+                        <button></button>
+                        <button></button>
+                    </div>
+
+                </div>
+                <div class="swiper-pagination"></div>
+                <!-- If we need scrollbar -->
+                <div class="swiper-scrollbar"></div>
+        </article>
+
+        <article class="main_banner">
+            <div id="banner_wrap">
+                <div class="event">
+                    <h3>Event</h3>
+                    <a href="">
+                        <img src="" alt="">
+                        <p>헬리녹스 인사이더즈 유튜브 구독자 이벤트</p>
+                        <p>2020-10-24</p>
+                    </a>
+                </div>
+                <div class="video">
+                    <h3>Video</h3>
+                    <a href="">
+                        <img src="" alt="">
+                        <p>헬리녹스 6th 컬렉션 리뷰</p>
+                        <p>2020-09-18</p>
+                    </a>
+                </div>
+                <div class="news">
+                    <h3>News</h3>
+                    <a href="">
+                        <img src="" alt="">
+                        <p>Helinox x BRGD 발매 소식</p>
+                        <p>2020-10-28</p>
+                    </a>
+                </div>
+            </div>
+            <div id="goUpBtn">
+                <button id="btnTop" type="button">
+                    Top
+                </button>
+            </div>
+        </article>
+    </section>
+
+    <footer id="footer">
+        <div class="footerwrap">
+            <div class="legal clearfix">
+                <strong>Legal</strong>
+                <a href="">개인정보처리방침</a>
+                <a href="">이용약관</a>
+                <a href="">이용안내</a>
+            </div>
+            <div class="social">
+                <strong>Social</strong>
+                <a href="https://www.facebook.com/helinox.kr"><img src="assets/img/icon/icon_facebook.svg" alt="페이스북 바로가기" width="30" height="30"></a>
+                <a href="https://www.instagram.com/helinox_kr/?igshid=13e7bfrdd0d1n"><img src="assets/img/icon/icon_instagram.svg" alt="인스타그램 바로가기" width="30" height="30"></a>
+                <a href="https://www.youtube.com/channel/UC3Kgey4nKkQkKFWyUQXn6ng"><img src="assets/img/icon/icon_youtube.svg" alt="유튜브 바로가기" width="30" height="30"></a>
+            </div>
+            <div class="cs">
+                <strong>Customer Service</strong>
+                <p>h1@helinox.com</p>
+            </div>
+            <div class="address">
+                <p>(주)헬리녹스</p>
+                <address>
+                    (04410) 서울특별시 용산구 한남대로 39<br>
+                    대표자명 : 라명환   책임자 : 이창희<br>
+                    사업자등록번호 : 101-86-83690<br>
+                    통신판매업신고 : 2020-서울용산-0047<br>
+                    고객센터 : 02-730-1928 (평일 10:00-16:00  OFF-TIME 12:00-13:00)<br><br>
+                </address>
+                <span>&copy; 2020 HELINOX. ALL RIGHTS RESERVED</span>
+            </div>
+        </div>
+    </footer>
+    </div>
+</body>
+</html>
