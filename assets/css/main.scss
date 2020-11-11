@@ -65,7 +65,18 @@ screen and (min-resolution: 3dppx) {
 
 //index:본문2
 .brandStory {
-    min-height: 700px; position: relative;text-align: center;background: #000;color: #fff;
+    min-height: 700px; position: relative;text-align: center;background: #000;color: #fff;overflow: hidden;
+    &::before {content: ""; position: absolute; background-color: rgba(0,0,0,.8);}
+    .marqueeWrap {
+        @include transform(rotate(-8deg));
+        
+        .marquee {
+            line-height: 110px; font-size: 122px; font-family: HvNenuBlk;
+            & .third {position:relative; }
+            span {position: absolute; color: #1C98D6;left: 686px;top: 228px;}
+        }
+
+    }
     .txtwrap {
         position: absolute; left: calc(50% - 119px); top: 200px;
         h3 {font-size: 22px;font-weight: 500;line-height: 29px;}
@@ -91,18 +102,20 @@ screen and (min-resolution: 3dppx) {
                 @include transition(transform 0.5s);
                 width: 80%; 
                 /* display: table; */
-                > img {/* width: 73.61111111111111vw; */padding-top: 9.375vh;}
+                > img {/* width: 73.61111111111111vw; */padding-top: 9.375vh;cursor: pointer;}
                 /* > img {display: table-cell;vertical-align: middle;} */
-                > p {font-size: 14px; padding: 7px 0 0;}
+                > p {font-size: 14px; padding: 7px 0 0;cursor: pointer;}
                 > p+p {margin-bottom: 15px;}
-                > a {font-family: Helvetica; color: #1C98D6 !important;font-weight: 400;}
+                > a {cursor: pointer;font-family: Helvetica; color: #1C98D6 !important;font-weight: 400;}
             }
             > .swiper-slide-prev, .swiper-slide-next {
                 @include transform(scale(0.9));
                 opacity: 0.7;
             }
-            > .swiper-slide-prev {transform-origin: right center;}
-            > .swiper-slide-next {transform-origin: left center;}
+            .swiper-slide-prev {transform-origin: right center;padding-right: 10px;}
+            .swiper-slide-next {transform-origin: left center;padding-left: 10px;}
+            .swiper-button-prev:after{padding-left: 10px;}
+            .swiper-button-next:after{padding-right: 10px;}
         }
     }
 }
@@ -116,11 +129,9 @@ screen and (min-resolution: 3dppx) {
         position: relative;height: 405px; width: 255px;margin: 0 60px 0 35px; 
         h4 {
             @include transform(rotate(90deg));
-            position: absolute; font-family: HvNenuBdExo; font-size: 54px; line-height: 58px; color: #333; 
+            position: absolute; font-family: HvNenuBdExo; font-size: 54px; line-height: 58px;color: #000; 
         }
         > img {
-            
-            /* @include transition 회전 효과*/
             @include transition(all 1.5s);
             position: absolute; top: 145px; left: -40px;max-width: none;
             &:hover, &:focus {
@@ -184,7 +195,7 @@ screen and (min-resolution: 3dppx) {
       }
     .swiper-scrollbar{
         //position: static; position속성을 제거할 경우
-        position: static;height: 3px;width: 100%;z-index: 1500;
+        position: static;height: 3px;width: 100%;z-index: 2500;
        .swiper-scrollbar-drag{height: 10px;background: #1C98D6;top: -2px;}
     }
 }
@@ -239,5 +250,11 @@ screen and (min-resolution: 3dppx) {
 
 //index: 본문 6
 .main_banner {
-    min-height: 600px; text-align: left;
+    min-height: 500px; text-align: left; margin-top: 80px;padding: 0 6.25vh 0 6.25vh;
+    .banner_wrap {cursor: pointer;}
+    h3 {font-family: HvNenuBlk;padding-bottom: 1.5px;}
+    a {
+        p {font-weight: 400;font-size: 11px;line-height: 15px;padding-top: 8px;}
+        > p:last-child {font-size: 9px;padding-top: 3px; line-height: 12px;color: rgb(151,151,151);padding-bottom: 26.5px;}
+    }
 }

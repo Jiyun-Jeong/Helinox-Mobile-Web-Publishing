@@ -53,7 +53,7 @@
 }
 @font-face {
     font-family: HvNenuBdExo;
-    font-weight: 700;
+    font-weight: 900;
     font-style: normal;
     src: url("../fonts/HelveticaNeueLTStd-BdExO.eot");
     src: url("../fonts/HelveticaNeueLTStd-BdExO.eot#iefix") format("embedded-opentype"),
@@ -99,18 +99,28 @@ body {font-family: aGothic, 'segoe UI'; font-size: 18px; font-weight: 500;/* cur
     @include transition(all 0.5s ease-in-out);
     position: fixed; top: 0px; left: 0;width: 100%; height:50px; z-indeX: 1000;
     &.load {top: 0;} //부모선택자를 &로 대신함
+    &.bgchange {
+        background: #fff;border-bottom: 1px solid #e5e5e5;
+        .logo a img:last-child, .shopping a img:last-child {opacity: 1;}
+        .shopping a img:last-child {left: -25px;}
+        .btn_menu .line{background: #000;}
+    }
 }
 .logo {
     a {display: block;height: 27px;width:125px;}
     &, a img{position: absolute;}
     top: 10px; left: calc(50% - 67.5px);height: 27px; width: 125px;
     a img {top: 0; left: 0;fill: #fff;}
+    a img:first-child{fill: #fff;}
     a img:last-child{opacity: 0;}
 }
 .shopping {
-    position: absolute; left: 15px; top: 10px; 
+    position: absolute; top: 10px; left: 15px; 
     a img {top: 0; left: 0;width: 25px; height: 25px;}
     a img:last-child{opacity: 0;}
+    &.bgchange {
+        a img {left: 25px;}
+    }
 }
 /* 햄버거 메뉴 */
 .btn_menu {
@@ -119,13 +129,13 @@ body {font-family: aGothic, 'segoe UI'; font-size: 18px; font-weight: 500;/* cur
     .line {
         @include radius(8px);
         @include transition(all 0.5s);
-        width: 100%; height: 2px;background: #fff; left: 0;
+        width: 100%; height: 3px;background: #fff; left: 0;
     }
     .top{top: 0;}
     .mid{top: 10px;}
     .btm{top: 20px;}
     &.active {
-        .line {background: #333 !important;}
+        .line {background: #000 !important;}
         .top {
             @include transform(45deg);
             top: 10px;

@@ -31,7 +31,7 @@
   src: url("../fonts/HelveticaNeueLTStd-Blk.eot#iefix") format("embedded-opentype"), url("../fonts/HelveticaNeueLTStd-Blk.woff2") format("woff2"), url("../fonts/HelveticaNeueLTStd-Blk.woff") format("woff"), url("../fonts/HelveticaNeueLTStd-Blk.otf") format("opentype"); }
 @font-face {
   font-family: HvNenuBdExo;
-  font-weight: 700;
+  font-weight: 900;
   font-style: normal;
   src: url("../fonts/HelveticaNeueLTStd-BdExO.eot");
   src: url("../fonts/HelveticaNeueLTStd-BdExO.eot#iefix") format("embedded-opentype"), url("../fonts/HelveticaNeueLTStd-BdExO.woff2") format("woff2"), url("../fonts/HelveticaNeueLTStd-BdExO.woff") format("woff"), url("../fonts/HelveticaNeueLTStd-BdExO.otf") format("opentype"); }
@@ -138,6 +138,15 @@ body {
   z-indeX: 1000; }
   #header.load {
     top: 0; }
+  #header.bgchange {
+    background: #fff;
+    border-bottom: 1px solid #e5e5e5; }
+    #header.bgchange .logo a img:last-child, #header.bgchange .shopping a img:last-child {
+      opacity: 1; }
+    #header.bgchange .shopping a img:last-child {
+      left: -25px; }
+    #header.bgchange .btn_menu .line {
+      background: #000; }
 
 .logo {
   top: 10px;
@@ -154,13 +163,15 @@ body {
     top: 0;
     left: 0;
     fill: #fff; }
+  .logo a img:first-child {
+    fill: #fff; }
   .logo a img:last-child {
     opacity: 0; }
 
 .shopping {
   position: absolute;
-  left: 15px;
-  top: 10px; }
+  top: 10px;
+  left: 15px; }
   .shopping a img {
     top: 0;
     left: 0;
@@ -168,6 +179,8 @@ body {
     height: 25px; }
   .shopping a img:last-child {
     opacity: 0; }
+  .shopping.bgchange a img {
+    left: 25px; }
 
 /* 햄버거 메뉴 */
 .btn_menu {
@@ -187,7 +200,7 @@ body {
     -o-transition: all 0.5s;
     transition: all 0.5s;
     width: 100%;
-    height: 2px;
+    height: 3px;
     background: #fff;
     left: 0; }
   .btn_menu .top {
@@ -197,7 +210,7 @@ body {
   .btn_menu .btm {
     top: 20px; }
   .btn_menu.active .line {
-    background: #333 !important; }
+    background: #000 !important; }
   .btn_menu.active .top {
     -webkit-transform: 45deg;
     transform: 45deg;

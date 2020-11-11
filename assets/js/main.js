@@ -15,15 +15,42 @@ $(document).ready(function () {
     }
   });
   
+  //본문2 marquee
+  (function($) {
+    $.fn.marquee=function(options) {
+      return this.each(function () {
+        var o = $.extend({}, $.fn.marquee.defaults, options),
+        $this = $(this),
+        $marqueeWrapper, containerWidth, animationCss, verticalDir, elWidth,
+        loopCound = 3,
+        palyState = 'animation-play-state',
+        css3AnimationIsSupported = false, 
+
+        //Private methods
+        _prefixedEvent = function(element, type, callback) {
+          var pfx = ["webkit", "moz", "MS", "o", ""];
+          for (var p = 0; p <pfx.length; p++) {
+            if(!pfx[p]) type = type.toLowerCase();
+            element.addEventListener(pfx[p]+type, callback, false);
+          }
+        }
+      })
+    }
+
+  });
+
   //본문3 슬라이더
   var mySwiper1 = new Swiper('.bestItem .swiper-container', {
     loop: true,
+    autoplay: {
+      delay: 2300,
+    },
     pagination: {
       el: '.swiper-pagination',
       type: 'fraction',
       //clickable: true, //bullet 타입일 경우 버튼 클릭시 이동 가능함
     },
-    spaceBetween: 5,
+    /* spaceBetween: 30, */
     slidesPerView: 'auto',
     centeredSlides: true,
     navigation: {
