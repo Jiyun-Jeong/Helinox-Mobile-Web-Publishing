@@ -167,11 +167,11 @@ body {font-family: aGothic, 'segoe UI'; font-size: 18px; font-weight: 500;/* cur
     @include transition(all 1s);
     opacity: 0;
     //수직은 translateY => 기준 아래는 +, 기준 위는 -
-    &.up {@include transform(translateY(30px));}
-    &.down{@include transform(translateY(-30px));}
+    &.up {@include transform(translateY(50px));}
+    &.down{@include transform(translateY(-50px));}
     //수평은 translateX => 기준 오른쪽 +, 기준 왼쪽-
-    &.left {@include transform(translateX(30px));}
-    &.right{@include transform(translateX(-30px));}
+    &.left {@include transform(translateX(50px));}
+    &.right{@include transform(translateX(-50px));}
 }
 .fade.on {
     opacity: 1;

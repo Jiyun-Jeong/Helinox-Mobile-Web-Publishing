@@ -290,17 +290,17 @@ body {
   transition: all 1s;
   opacity: 0; }
   .fade.up {
-    -webkit-transform: translateY(30px);
-    transform: translateY(30px); }
+    -webkit-transform: translateY(50px);
+    transform: translateY(50px); }
   .fade.down {
-    -webkit-transform: translateY(-30px);
-    transform: translateY(-30px); }
+    -webkit-transform: translateY(-50px);
+    transform: translateY(-50px); }
   .fade.left {
-    -webkit-transform: translateX(30px);
-    transform: translateX(30px); }
+    -webkit-transform: translateX(50px);
+    transform: translateX(50px); }
   .fade.right {
-    -webkit-transform: translateX(-30px);
-    transform: translateX(-30px); }
+    -webkit-transform: translateX(-50px);
+    transform: translateX(-50px); }
 
 .fade.on {
   opacity: 1; }

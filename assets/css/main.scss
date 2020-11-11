@@ -68,14 +68,13 @@ screen and (min-resolution: 3dppx) {
     min-height: 700px; position: relative;text-align: center;background: #000;color: #fff;overflow: hidden;
     &::before {content: ""; position: absolute; background-color: rgba(0,0,0,.8);}
     .marqueeWrap {
-        @include transform(rotate(-8deg));
-        
+        @include transform(rotate(-8deg));padding-top: 150px;
+        width: 200%;position: absolute;
         .marquee {
             line-height: 110px; font-size: 122px; font-family: HvNenuBlk;
             & .third {position:relative; }
             span {position: absolute; color: #1C98D6;left: 686px;top: 228px;}
         }
-
     }
     .txtwrap {
         position: absolute; left: calc(50% - 119px); top: 200px;

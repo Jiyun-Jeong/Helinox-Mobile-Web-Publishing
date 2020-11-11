@@ -86,7 +86,10 @@
     background-color: rgba(0, 0, 0, 0.8); }
   .brandStory .marqueeWrap {
     -webkit-transform: rotate(-8deg);
-    transform: rotate(-8deg); }
+    transform: rotate(-8deg);
+    padding-top: 150px;
+    width: 200%;
+    position: absolute; }
     .brandStory .marqueeWrap .marquee {
       line-height: 110px;
       font-size: 122px;
