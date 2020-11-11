@@ -101,25 +101,24 @@ body {font-family: aGothic, 'segoe UI'; font-size: 18px; font-weight: 500;/* cur
     &.load {top: 0;} //부모선택자를 &로 대신함
     &.bgchange {
         background: #fff;border-bottom: 1px solid #e5e5e5;
-        .logo a img:last-child, .shopping a img:last-child {opacity: 1;}
-        .shopping a img:last-child {left: -25px;}
+        #logo .st0 {fill: #000;}
+        .shopping a .shop {fill:#000;}
         .btn_menu .line{background: #000;}
+        
     }
 }
 .logo {
     a {display: block;height: 27px;width:125px;}
-    &, a img{position: absolute;}
+    &, a svg{position: absolute;}
     top: 10px; left: calc(50% - 67.5px);height: 27px; width: 125px;
-    a img {top: 0; left: 0;fill: #fff;}
-    a img:first-child{fill: #fff;}
-    a img:last-child{opacity: 0;}
+    a svg {top: 0; left: 0;fill: #fff;}
+
 }
 .shopping {
     position: absolute; top: 10px; left: 15px; 
-    a img {top: 0; left: 0;width: 25px; height: 25px;}
-    a img:last-child{opacity: 0;}
+    a svg {top: 0; left: 0;width: 28px; height: 28px;}
     &.bgchange {
-        a img {left: 25px;}
+        a svg .shop {fill: #000;}
     }
 }
 /* 햄버거 메뉴 */
@@ -161,7 +160,7 @@ body {font-family: aGothic, 'segoe UI'; font-size: 18px; font-weight: 500;/* cur
 #gnb ul li ul li a {padding: 3px 80px;}
 
 //공통 본문
-#content {padding-bottom: 100px;}
+#content {padding-bottom: 80px;}
 
 .fade {
     @include transition(all 1s);
@@ -172,11 +171,15 @@ body {font-family: aGothic, 'segoe UI'; font-size: 18px; font-weight: 500;/* cur
     //수평은 translateX => 기준 오른쪽 +, 기준 왼쪽-
     &.left {@include transform(translateX(50px));}
     &.right{@include transform(translateX(-50px));}
+    //커지기
+    &.smaller {@include transform(scale(1.3));}
+    &.bigger {@include transform(scale(0.7));}
 }
 .fade.on {
     opacity: 1;
     &.up, &.down {@include transform(translateY(0px));}
     &.left, &.right{@include transform(translateX(0px));}
+    &.smaller, &.bigger {@include transform(scale(1));}
 }
 
 // Top버튼
@@ -188,7 +191,8 @@ body {font-family: aGothic, 'segoe UI'; font-size: 18px; font-weight: 500;/* cur
 // Footer
 #footer {
     @include border-box;
-    background: #000; height: 440px; color: #fff; padding: 70px 30px 40px;text-align: left;font-size: 14px;
+    background: #000; height: 440px; color: #fff; padding: 10.9375vh 8.333333333333333vw 6.25vh;text-align: left;font-size: 14px;
+    svg {width: 30px;height: 30px;}
     .legal a, .cs p  {font-size: 12px;font-weight: 300;}
     strong {margin-bottom: 8px;} 
     .legal {
@@ -200,16 +204,13 @@ body {font-family: aGothic, 'segoe UI'; font-size: 18px; font-weight: 500;/* cur
     .social { 
         float: right; width: 102px; height: 50px; 
         strong {display: block;}
-        a img{width: 30px;height: 30px;background: pink;/* fill: #fff; */}
-        a + a {padding-right: 6px;}
+        a img{width: 30px;height: 30px;}
     }
     .cs {
-        width: 131px;  height: 50px;background: blue;
-        strong {padding-top: 63px;}
-        p {padding-bottom: 55px;}
+        display: block; width: 131px;  height: 50px;background: blue;
     }
     .address {
-        line-height: 15px; font-size: 9.5px;
+        line-height: 15px; font-size: 9.5px; 
         address, span {color: #666; }
     }
 }

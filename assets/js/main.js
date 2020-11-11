@@ -16,7 +16,7 @@ $(document).ready(function () {
   });
   
   //본문2 marquee
-  (function($) {
+/*   (function($) {
     $.fn.marquee=function(options) {
       return this.each(function () {
         var o = $.extend({}, $.fn.marquee.defaults, options),
@@ -37,14 +37,22 @@ $(document).ready(function () {
       })
     }
 
-  });
+  }); */
+/*   $(document).ready(function (){
+    $('brandStory .marqueeWrap').on('scroll', function () {
+      var scrollY = $(this).scrollTop();
+      console.log(scrollY);
+
+      if (scrollY >= 600 ) $(this).css({opacity: 0.7}).removeClass('animation');
+    });
+  }); */
 
   //본문3 슬라이더
   var mySwiper1 = new Swiper('.bestItem .swiper-container', {
     loop: true,
-    autoplay: {
+/*     autoplay: {
       delay: 2300,
-    },
+    }, */
     pagination: {
       el: '.swiper-pagination',
       type: 'fraction',
@@ -69,12 +77,12 @@ $(document).ready(function () {
   var mySwiper2 = new Swiper('.category .swiper-container', {
     pagination: {
       el: '.swiper-pagination',
-      type: 'bulltes',
+      type: 'fraction',
     },
     /* autoplay: {
       delay: 2300,
     }, */
-    spaceBetween: 30, //각 슬라이더 사이 공간
+    spaceBetween: 82, //각 슬라이더 사이 공간
     slidesPerView: 'auto', //한 화면에 보여질 슬라이더 개수 기본1
     centeredSlides: true, //슬라이더 가운데 중요 슬라이더 위치
     scrollbar: {

@@ -141,10 +141,10 @@ body {
   #header.bgchange {
     background: #fff;
     border-bottom: 1px solid #e5e5e5; }
-    #header.bgchange .logo a img:last-child, #header.bgchange .shopping a img:last-child {
-      opacity: 1; }
-    #header.bgchange .shopping a img:last-child {
-      left: -25px; }
+    #header.bgchange #logo .st0 {
+      fill: #000; }
+    #header.bgchange .shopping a .shop {
+      fill: #000; }
     #header.bgchange .btn_menu .line {
       background: #000; }
 
@@ -157,30 +157,24 @@ body {
     display: block;
     height: 27px;
     width: 125px; }
-  .logo, .logo a img {
+  .logo, .logo a svg {
     position: absolute; }
-  .logo a img {
+  .logo a svg {
     top: 0;
     left: 0;
     fill: #fff; }
-  .logo a img:first-child {
-    fill: #fff; }
-  .logo a img:last-child {
-    opacity: 0; }
 
 .shopping {
   position: absolute;
   top: 10px;
   left: 15px; }
-  .shopping a img {
+  .shopping a svg {
     top: 0;
     left: 0;
-    width: 25px;
-    height: 25px; }
-  .shopping a img:last-child {
-    opacity: 0; }
-  .shopping.bgchange a img {
-    left: 25px; }
+    width: 28px;
+    height: 28px; }
+  .shopping.bgchange a svg .shop {
+    fill: #000; }
 
 /* 햄버거 메뉴 */
 .btn_menu {
@@ -281,7 +275,7 @@ body {
   padding: 3px 80px; }
 
 #content {
-  padding-bottom: 100px; }
+  padding-bottom: 80px; }
 
 .fade {
   -webkit-transition: all 1s;
@@ -301,6 +295,12 @@ body {
   .fade.right {
     -webkit-transform: translateX(-50px);
     transform: translateX(-50px); }
+  .fade.smaller {
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3); }
+  .fade.bigger {
+    -webkit-transform: scale(0.7);
+    transform: scale(0.7); }
 
 .fade.on {
   opacity: 1; }
@@ -310,6 +310,9 @@ body {
   .fade.on.left, .fade.on.right {
     -webkit-transform: translateX(0px);
     transform: translateX(0px); }
+  .fade.on.smaller, .fade.on.bigger {
+    -webkit-transform: scale(1);
+    transform: scale(1); }
 
 #btnTop {
   -webkit-transition: opacity 0.3s;
@@ -337,9 +340,12 @@ body {
   background: #000;
   height: 440px;
   color: #fff;
-  padding: 70px 30px 40px;
+  padding: 10.9375vh 8.333333333333333vw 6.25vh;
   text-align: left;
   font-size: 14px; }
+  #footer svg {
+    width: 30px;
+    height: 30px; }
   #footer .legal a, #footer .cs p {
     font-size: 12px;
     font-weight: 300; }
@@ -365,19 +371,12 @@ body {
       display: block; }
     #footer .social a img {
       width: 30px;
-      height: 30px;
-      background: pink;
-      /* fill: #fff; */ }
-    #footer .social a + a {
-      padding-right: 6px; }
+      height: 30px; }
   #footer .cs {
+    display: block;
     width: 131px;
     height: 50px;
     background: blue; }
-    #footer .cs strong {
-      padding-top: 63px; }
-    #footer .cs p {
-      padding-bottom: 55px; }
   #footer .address {
     line-height: 15px;
     font-size: 9.5px; }
