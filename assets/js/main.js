@@ -15,30 +15,12 @@ $(document).ready(function () {
       $('.brandStory').addClass('on');
     }
   });
-  
-  //본문2 marquee
-  (function($) {
-    $.fn.marquee=function(options) {
-      return this.each(function () {
-        var o = $.extend({}, $.fn.marquee.defaults, options),
-        $this = $(this),
-        $marqueeWrapper, containerWidth, animationCss, verticalDir, elWidth,
-        loopCound = 3,
-        palyState = 'animation-play-state',
-        css3AnimationIsSupported = false, 
 
-        //Private methods
-        _prefixedEvent = function(element, type, callback) {
-          var pfx = ["webkit", "moz", "MS", "o", ""];
-          for (var p = 0; p <pfx.length; p++) {
-            if(!pfx[p]) type = type.toLowerCase();
-            element.addEventListener(pfx[p]+type, callback, false);
-          }
-        }
-      })
-    }
+  //마우스 휠
+      $('#scrolldBtn').on('click', function() {
+      $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top}, 500, 'linear');
+    });
 
-  });
 
 
   //본문3 슬라이더
@@ -52,7 +34,7 @@ $(document).ready(function () {
       type: 'fraction',
       //clickable: true, //bullet 타입일 경우 버튼 클릭시 이동 가능함
     },
-    /* spaceBetween: 30, */
+    spaceBetween: 30,
     slidesPerView: 'auto',
     centeredSlides: true,
     navigation: {
@@ -76,7 +58,7 @@ $(document).ready(function () {
     /* autoplay: {
       delay: 2300,
     }, */
-    spaceBetween: 82, //각 슬라이더 사이 공간
+    spaceBetween: 30, //각 슬라이더 사이 공간
     slidesPerView: 'auto', //한 화면에 보여질 슬라이더 개수 기본1
     centeredSlides: true, //슬라이더 가운데 중요 슬라이더 위치
     scrollbar: {

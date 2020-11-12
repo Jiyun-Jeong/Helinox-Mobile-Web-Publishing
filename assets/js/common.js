@@ -2,7 +2,7 @@ $(document).ready(function () {
     var scrollY;
     var timer = 0;
 
-    var $gnb = $('#gnb')
+    var _gnb = $('#gnb')
 
     //문서 로딩 => #header.load 추가 후 브라우저 상단에서 아래로 내려오는 처리
     $('#header').addClass('on');
@@ -28,7 +28,7 @@ $(document).ready(function () {
     //메뉴열기 클릭
     $('.btn_menu').on('click', function () {
         if($(this).hasClass('active')) {
-            $gnb.stop().animate({left: '100%'}, 300, function () {
+            _gnb.stop().animate({left: '100%'}, 300, function () {
                 $(this).css({display: 'none'}).find('ul li.on').removeClass('on').children('ul').stop().slideUp();
             });
 
@@ -38,10 +38,10 @@ $(document).ready(function () {
             console.log(scrollMove);
 
             $(this).addClass('active').find('blind-b').text('메뉴 닫기');
-            var $first = $gnb.find('[data-link=first]');
-            var $last = $gnb.find('[data-link=last]');
+            var $first = _gnb.find('[data-link=first]');
+            var $last = _gnb.find('[data-link=last]');
 
-            $gnb.css({display: 'block'}).stop().animate({left: 0}, 300, function () {
+            _gnb.css({display: 'block'}).stop().animate({left: 0}, 300, function () {
                 $first.focus();
             });
 
@@ -62,7 +62,7 @@ $(document).ready(function () {
         }
 
         //depth1 a click
-        $gnb.find('>ul>li>a').on('click', function () {
+        _gnb.find('>ul>li>a').on('click', function () {
             if($(this).next().size() === 0) {
                 location.href=$(this).attr('href');
             } else {
@@ -72,24 +72,10 @@ $(document).ready(function () {
             return false;
         });
     });
-});
 
 
-// #gnb depth 1 ul 열기
-$(document).ready(function () {
-    $('#gnb > ul > li > a').on('click', function () {
-        if ($(this).next().length === 0) {
-            location.href = $(this).attr('href');
-        } else {
-            $(this).parent().siblings().removeClass('on').find('ul').stop().slideUp();
-            $(this).next().stop().slideToggle("fast").parent().toggleClass('on');
-        }
-        return false;
-    });
-});
 
-// #goUpBtn
-$(document).ready(function () {
+    //gotoUp
     $(window).on('scroll', function () {
         var scrollY = $(this).scrollTop();
 
@@ -99,4 +85,19 @@ $(document).ready(function () {
         
         return false;
     });
+
+    $('#goBtnUp').on('click', function () {
+        var _target = $( $(this).attr('href'))
+        var targetTop = _target.offset().top;
+
+        $('html, body').stop().animate({scrollTop: targetTop});
+        return false;
+    });
 });
+
+// #goUpBtn
+    
+
+
+
+

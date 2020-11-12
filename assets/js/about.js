@@ -1,11 +1,14 @@
 $(document).ready(function () {
-    $('.top_visual .twtwrap').on('scroll', function () {
-        var targetTop = $(this).offset().top;
-        console.log(targetTop);
+    $(window).on('scroll', function () {
+        var targetTop = $(this).scrollTop();
+        var fixTop = $('.sub_visual').offset().top - 200;
 
-        985
-        if ( targetTop >= 985 ) {
-            $(this).find('p').css({color: '#1C98D6'}).parent().attr({position: absolute, top: 985});
+        console.log(targetTop, fixTop);
+
+        /* 985 */
+        if ( targetTop >= fixTop  ) {
+            console.log(targetTop);
+            $('.top_visual .txtwrap').find('h3').css({color: '#1C98D6'}).parent().css({position: 'absolute', top: fixTop});
         }
     });
 });
