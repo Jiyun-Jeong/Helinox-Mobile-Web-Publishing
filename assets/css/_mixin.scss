@@ -25,3 +25,9 @@
     -webkit-border-radius: $value;
     border-radius: $value;
 }
+@mixin anitmation($value...) {
+    -webkit-animation: $value;
+    -moz-animation: $value;
+    -o-animation: $value;
+    animation: $value;
+}

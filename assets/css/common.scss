@@ -91,8 +91,9 @@ header, nav, section, footer {display: block;}
 .font1 {font-family: aGothic;}
 .font2 {font-family: Helvetica;}
 .mt_50 {margin-top: 50px;}
+/* .mt_35 {padding-top: 5.46875vh;} */
 
-body {font-family: aGothic, 'segoe UI'; font-size: 18px; font-weight: 500;/* cursor: url("../../cursor.cur"), pointer; */line-height: 18px; word-break: keep-all;color: #333;text-align: center;}
+body {font-family: aGothic, 'segoe UI'; font-size: 18px; font-weight: 500;/* cursor: url("../../cursor.cur"), pointer; */line-height: 5vw; word-break: keep-all;color: #333;text-align: center;}
 #wrap {overflow: hidden;min-width: 320px;}
 
 #header {

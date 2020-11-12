@@ -111,12 +111,13 @@ header, nav, section, footer {
 .mt_50 {
   margin-top: 50px; }
 
+/* .mt_35 {padding-top: 5.46875vh;} */
 body {
   font-family: aGothic, 'segoe UI';
   font-size: 18px;
   font-weight: 500;
   /* cursor: url("../../cursor.cur"), pointer; */
-  line-height: 18px;
+  line-height: 5vw;
   word-break: keep-all;
   color: #333;
   text-align: center; }

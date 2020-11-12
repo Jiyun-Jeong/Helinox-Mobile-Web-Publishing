@@ -10,13 +10,14 @@ $(document).ready(function () {
   $(window).on('scroll', function () {
     var scrollT = $(this).scrollTop();
 
-    if (scrollT > $('.main_banner').offset().top - 500) {
-      $('.main_banner').addClass('on');
+    //brandStory 내부의 텍스트 marquee 효과 나타나기
+    if (scrollT > $('brandStory').offset().top - 300) {
+      $('.brandStory').addClass('on');
     }
   });
   
   //본문2 marquee
-/*   (function($) {
+  (function($) {
     $.fn.marquee=function(options) {
       return this.each(function () {
         var o = $.extend({}, $.fn.marquee.defaults, options),
@@ -37,15 +38,8 @@ $(document).ready(function () {
       })
     }
 
-  }); */
-/*   $(document).ready(function (){
-    $('brandStory .marqueeWrap').on('scroll', function () {
-      var scrollY = $(this).scrollTop();
-      console.log(scrollY);
+  });
 
-      if (scrollY >= 600 ) $(this).css({opacity: 0.7}).removeClass('animation');
-    });
-  }); */
 
   //본문3 슬라이더
   var mySwiper1 = new Swiper('.bestItem .swiper-container', {
