@@ -90,15 +90,14 @@ header, nav, section, footer {display: block;}
 .blind-b {width: 1px;height: 1px;overflow: hidden; border: none;clip: rect(1px, 1px, 1px, 1px); clip-path: inset(50%);position: absolute;}
 .font1 {font-family: aGothic;}
 .font2 {font-family: Helvetica;}
-.mt_50 {margin-top: 50px;}
-/* .mt_35 {padding-top: 5.46875vh;} */
+.mt_50 {margin-top: 13.88888888888889vw;}
 
-body {font-family: aGothic, 'segoe UI'; font-size: 18px; font-weight: 500;/* cursor: url("../../cursor.cur"), pointer; */line-height: 5vw; word-break: keep-all;color: #333;text-align: center;}
+body {font-family: aGothic, 'segoe UI'; font-size: 5vw; font-weight: 500;/* cursor: url("../../cursor.cur"), pointer; */line-height: 5vw; word-break: keep-all;color: #333;text-align: center;}
 #wrap {overflow: hidden;min-width: 320px;}
 
 #header {
     @include transition(all 0.5s ease-in-out);
-    position: fixed; top: 0px; left: 0;width: 100%; height:50px; z-indeX: 1000;
+    position: fixed; top: 0; left: 0;width: 100%; height:13.88888888888889vw; z-indeX: 1000;
     &.load {top: 0;} //부모선택자를 &로 대신함
     &.bgchange {
         background: #fff;border-bottom: 1px solid #e5e5e5;
@@ -109,15 +108,15 @@ body {font-family: aGothic, 'segoe UI'; font-size: 18px; font-weight: 500;/* cur
     }
 }
 .logo {
-    a {display: block;height: 27px;width:125px;}
+    a {display: block;height: 7.5vw;width:34.72222222222222vw;}
     &, a svg{position: absolute;}
-    top: 10px; left: calc(50% - 67.5px);height: 27px; width: 125px;
+    top: 2.777777777777778vw; left: calc(50% - 18.75vw);height: 7.5vw; width:34.72222222222222vw;
     a svg {top: 0; left: 0;fill: #fff;}
 
 }
 .shopping {
-    position: absolute; top: 10px; left: 15px; 
-    a svg {top: 0; left: 0;width: 28px; height: 28px;}
+    position: absolute; top: 2.777777777777778vw; left: 4.166666666666667vw; 
+    a svg {top: 0; left: 0;width: 7.777777777777778vw; height: 7.777777777777778vw;}
     &.bgchange {
         a svg .shop {fill: #000;}
     }
@@ -125,53 +124,55 @@ body {font-family: aGothic, 'segoe UI'; font-size: 18px; font-weight: 500;/* cur
 /* 햄버거 메뉴 */
 .btn_menu {
     &, .line {position: absolute;}
-    top: 12.5px; right: 13.5px; width: 29px; height: 24px; overflow: hidden; z-index: 1100;
+    top: 3.472222222222222vw; right: 3.75vw; width: 8.055555555555556vw; height: 6.666666666666667vw; overflow: hidden; z-index: 1100;
     .line {
         @include radius(8px);
         @include transition(all 0.5s);
-        width: 100%; height: 3px;background: #fff; left: 0;
+        width: 100%; height: 0.8333333333333333vw; background: #fff; left: 0;
     }
     .top{top: 0;}
-    .mid{top: 10px;}
-    .btm{top: 20px;}
+    .mid{top: 2.777777777777778vw;}
+    .btm{top: 5.555555555555556vw;}
     &.active {
         .line {background: #000 !important;}
         .top {
             @include transform(45deg);
-            top: 10px;
+            top: 2.777777777777778vw;
         }
         .mid {left: 100%;}
         .btm {
             @include transform(-45deg);
-            top: 10px;
+            top: 2.777777777777778vw;
         }
     }
 }
 /* 네비게이션 */
 #gnb {
     display: none; position: fixed; top: 0; left: 100%; right: 0; bottom: 0; background: #fff; color: #000;overflow-y: auto;text-align: left;}
-#gnb > ul {padding: 56px 0;font-weight: 800;}
-#gnb ul li a {display: block; height: 35px; line-height: 35px;}
-#gnb > ul > li > a {position: relative; font-size: 45px;padding: 15px 25px;}
+#gnb > ul {padding: 15.55555555555556vw 0;font-weight: 800;}
+#gnb ul li a {display: block; height: 9.722222222222222vw; line-height: 9.722222222222222vw;}
+#gnb > ul > li > a {position: relative; font-size: 12.5vw;padding: 4.166666666666667vw 6.944444444444444vw;}
 /* 가상요소 */
-#gnb > ul > li:not(.gnb1) >a::before, #gnb > ul> li:not(.gnb1) >a::after {-webkit-transition: transform 0.3s;-moz-transition: transform 0.3s;-o-transition: transform 0.3s;transition: transform 0.3s;content:""; position: absolute; top: 50%; right: 40px; width: 12px; height: 2px; background: #000000;}
+#gnb > ul > li:not(.gnb1) >a::before, #gnb > ul> li:not(.gnb1) >a::after {
+    @include transition(transform(0.3s));
+    content:""; position: absolute; top: 50%; right: 11.11111111111111vw; width: 3.333333333333333vw; height: 0.5555555555555556vw; background: #000000;}
 #gnb > ul > li > a::after {-webkit-transform: rotate(90deg); transform: rotate(90deg); }
 #gnb > ul > li.on > a::after {-webkit-transform: rotate(0deg);transform: rotate(0deg);}
-#gnb ul li ul {display: none; font-weight: 400;font-size: 22px;color: #8B8B8B;}
-#gnb ul li ul li a {padding: 3px 80px;}
+#gnb ul li ul {display: none; font-weight: 400;font-size: 6.111111111111111vw;color: #8B8B8B;}
+#gnb ul li ul li a {padding: 0.8333333333333333vw 22.22222222222222vw;}
 
 //공통 본문
-#content {padding-bottom: 80px;}
+#content {padding-bottom: 22.22222222222222vw;}
 
 .fade {
     @include transition(all 1s);
     opacity: 0;
     //수직은 translateY => 기준 아래는 +, 기준 위는 -
-    &.up {@include transform(translateY(50px));}
-    &.down{@include transform(translateY(-50px));}
+    &.up {@include transform(translateY(13.88888888888889vw));}
+    &.down{@include transform(translateY(-13.88888888888889vw));}
     //수평은 translateX => 기준 오른쪽 +, 기준 왼쪽-
-    &.left {@include transform(translateX(50px));}
-    &.right{@include transform(translateX(-50px));}
+    &.left {@include transform(translateX(13.88888888888889vw));}
+    &.right{@include transform(translateX(-13.88888888888889vw));}
     //커지기
     &.smaller {@include transform(scale(1.3));}
     &.bigger {@include transform(scale(0.7));}
@@ -186,32 +187,32 @@ body {font-family: aGothic, 'segoe UI'; font-size: 18px; font-weight: 500;/* cur
 // Top버튼
 #btnTop {
     @include transition(opacity 0.3s);
-    position: fixed; width: 50px; height: 55px;right: 20px; bottom: 50px; text-align: top;line-height: 55px;background: #fff;color: #000 ;opacity: 0;z-index: 1300;}
+    position: fixed; width: 13.88888888888889vw; height: 15.27777777777778vw;right: 5.555555555555556vw; bottom: 13.88888888888889vw; text-align: top;line-height: 15.27777777777778vw;background: #fff;color: #000 ;opacity: 0;z-index: 1300;}
 #btnTop.active {opacity: 1;}
 
 // Footer
 #footer {
     @include border-box;
-    background: #000; height: 440px; color: #fff; padding: 10.9375vh 8.333333333333333vw 6.25vh;text-align: left;font-size: 14px;
-    svg {width: 30px;height: 30px;}
-    .legal a, .cs p  {font-size: 12px;font-weight: 300;}
-    strong {margin-bottom: 8px;} 
+    background: #000; height: 122.2222222222222vw; color: #fff; padding: 18.88888888888889vw 10.55555555555556vw 11.66666666666667vw;text-align: left;font-size: 3.888888888888889vw;
+    svg {width: 8.333333333333333vw;height: 8.333333333333333vw;}
+    .legal a, .cs p  {font-size: 3.333333333333333vw;font-weight: 300;}
+    strong {margin-bottom: 2.222222222222222vw;} 
     .legal {
-        float: left;height: 70px;width: 84px;
-        a {display: block;height: 12px;width: 131px;}
-        a + a {padding-top: 6px;}
-        a:last-child {padding-bottom: 55px;}
+        float: left;height: 19.44444444444444vw;width: 23.33333333333333vw;
+        a {display: block;height: 3.333333333333333vw;width: 36.38888888888889vw;}
+        a + a {padding-top: 1.666666666666667vw;}
+        a:last-child {padding-bottom: 15.27777777777778vw;}
     }
     .social { 
-        float: right; width: 102px; height: 50px; 
+        float: right; width: 28.33333333333333vw; height: 13.88888888888889vw; 
         strong {display: block;}
-        a img{width: 30px;height: 30px;}
+        a img{width: 8.333333333333333vw;height: 8.333333333333333vw;}
     }
     .cs {
-        display: block; width: 131px;  height: 50px;background: blue;
+        display: block; width: 36.38888888888889vw; height: 13.88888888888889vw;clear: both;padding-top: 17.5vw;
     }
     .address {
-        line-height: 15px; font-size: 9.5px; 
+        line-height: 4.166666666666667vw; font-size: 2.638888888888889vw; 
         address, span {color: #666; }
     }
 }

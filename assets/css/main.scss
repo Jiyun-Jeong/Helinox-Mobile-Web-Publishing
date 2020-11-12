@@ -30,20 +30,20 @@
         background-image: url("../img/main/bg1_1x.png");
     }
     .txtwrap {
-        left: -20.5%; top: -7.8125vh; 
-        strong {font-size: 6.666666666666667vw;line-height: 4.84375vh;font-weight: 500;}
+        left: -20.777778vw; top: -17.777778vw; 
+        strong {font-size: 6.666666666666667vw;line-height: 1.3;font-weight: 500;}
     }
     .scrollBtn {
-        position:absolute; bottom: 100px; left: calc(50% - 15px);
+        position:absolute; bottom: 27.77777777777778vw; left: calc(50% - 4.166666666666667vw);
         a { 
             @include border-box;
-            padding-top: 60px;color: #fff;
+            padding-top: 16.66666666666667vw;color: #fff;
             span {
-                position: absolute; top: 0; left: calc(50% - 15px); width: 30px; height: 50px; margin-left: -15px; border: 2px solid #fff; border-radius: 50px;
+                position: absolute; top: 0; left: calc(50% - 4.166666666666667vw); width: 8.333333333333333vw; height: 13.88888888888889vw; margin-left: -4.166666666666667vw; border: 0.5555555555555556vw solid #fff; border-radius: 50px;
                 ::before {
                     @include border-box;
                     @include radius(100%);
-                    content: ""; position: absolute; top: 10px; left: 50%; width: 6px;height: 6px;margin-left: -3px; -webkit-animation: scrollBtn 2s infinite; animation: scrollBtn 2s infinite;
+                    content: ""; position: absolute; top: 2.777777777777778vw; left: 50%; width: 1.666666666666667vw;height: 1.666666666666667vw;margin-left: -0.8333333333333333vw; -webkit-animation: scrollBtn 2s infinite; animation: scrollBtn 2s infinite;
                 }
             }
 
@@ -108,22 +108,22 @@ screen and (min-resolution: 3dppx) {
 
 //index:본문2
 .brandStory {
-    min-height: 812px; position: relative;text-align: center;background: #000;color: #fff;overflow: hidden;
+    min-height: 225.5555555555556vw; position: relative;text-align: center;background: #000;color: #fff;overflow: hidden;
     &::before {content: ""; position: absolute; background-color: rgba(0,0,0,.8);}
     .marqueeWrap, .txtwrap{
-        position: absolute;top: 50%;left: 50%;  //수직, 수평 가운데 위치
+        position: absolute;top: 50%;left: 50%; width:75vw;  //수직, 수평 가운데 위치
     }
     .marqueeWrap {
         @include transform(translate(-50%, -50%) rotate(-8deg));
         @include transition(opacity 1s  3s);
         width: 1000%;
-        > div:nth-child(2){padding-left: 50px;}
+        > div:nth-child(2){padding-left: 13.88888888888889vw;}
         .marquee {
-            @include animation(scrollMarquee 6s linear infinite);
+            @include animation(scrollMarquee 7s linear infinite);
             position: relative;display: inline-block;line-height: 110px; font-size: 122px; font-family: HvNenuBlk;text-align: left;
             .color {
                 @include transition(opacity 1s 2s);
-                position: absolute; color: #1C98D6;left: -7px;top: -7px;opacity: 0;
+                position: absolute; color: #1C98D6;left: -1.944444444444444vw;top: -1.944444444444444vw;opacity: 0;
             }
         }
     }
@@ -131,12 +131,12 @@ screen and (min-resolution: 3dppx) {
         @include transform(translate(-50%, -50%));
         @include transition(opacity 1s 3s);
         opacity: 0;
-        h3 {font-size: 22px;font-weight: 500;line-height: 29px;}
-        p {font-size: 16px;font-weight: 300;line-height: 25px;padding: 55px 0 50px;}
+        h3 {font-size: 6.111111111111111vw;font-weight: 500;line-height: 1.32;}
+        p {font-size: 4.444444444444444vw;font-weight: 300;line-height: 1.56;padding: 15.27777777777778vw 0 13.88888888888889vw;}
         .brandBtn {
             @include border-box;
             @include transition(all 0.3s);
-            display: inline-block;font-weight: 500;top: 10px; width: 190px; height: 44px;line-height: 44px; border: 1px solid #fff; 
+            display: inline-block;font-weight: 500;top: 2.777777777777778vw; width: 52.77777777777778vw; height: 12.22222222222222vw;line-height: 12.22222222222222vw; border: 0.2777777777777778vw solid #fff; 
             &:hover, &:active {background-color: #1C98D6; color: #000;border-color: #1C98D6;}
         }
     }
@@ -164,16 +164,16 @@ screen and (min-resolution: 3dppx) {
 
 //index: 본문3
 .bestItem {
-    min-height: 600px;margin-top: 80px;
-    > h3 {font-family: HvNenuBlk;font-size: 6.111111111111111vw;line-height: 7.222222222222222vw;padding-bottom: 11.8px;}
+    min-height: 166.6666666666667vw;margin-top: 22.22222222222222vw;
+    > h3 {font-family: HvNenuBlk;font-size: 6.111111111111111vw;line-height: 7.222222222222222vw;padding-bottom: 3.277777777777778vw;}
     > .swiper-container {
-        height: 463px; margin: 0 -15px;background-color: #E2E2E2;
+        height: 128.6111111111111vw; margin: 0 -4.166666666666667vw;background-color: #E2E2E2;
         > .swiper-wrapper {
             margin: 0 auto; 
             > .swiper-slide {
-                > img {padding-top: 9.375vh;cursor: pointer;}
-                > p {font-size: 14px; padding: 7px 0 0;cursor: pointer;}
-                > p+p {margin-bottom: 15px;}
+                > img {padding-top: 24.38888888888889vw;cursor: pointer;}
+                > p {font-size: 3.888888888888889vw; padding: 1.944444444444444vw 0 0;cursor: pointer;}
+                > p+p {margin-bottom: 4.166666666666667vw;}
                 > a {cursor: pointer;font-family: Helvetica; color: #1C98D6 !important;font-weight: 400;}
             }
             > .swiper-slide-prev, .swiper-slide-next {
@@ -232,9 +232,9 @@ screen and (min-resolution: 3dppx) {
       background-color: #E3FF24;
       h4 {top: 56px; left: 175px;}
     }
-    .swiper-pagination {position: relative; bottom: -24px;left: 285px;width: 50px;}
+    .swiper-pagination {position: relative; bottom: -24px;left: 285px;width: 13.88888888888889vw;}
     .swiper-button-next:after, .swiper-button-prev:after {display: none;}
-    .swiper-button-prev {position: absolute; width: 129px;height: 18px;bottom: -50px; left: 25px;}
+    .swiper-button-prev {position: absolute; width: 129px;height: 18px;bottom: -13.88888888888889vw; left: 25px;}
 }
 
 //index: 본문5
@@ -262,13 +262,13 @@ screen and (min-resolution: 3dppx) {
       }
     .swiper-scrollbar{
         //position: static; position속성을 제거할 경우
-        position: static;height: 3px;width: 100%;z-index: 2500;
-       .swiper-scrollbar-drag{height: 10px;background: #1C98D6;top: -2px;}
+        position: static;height: 0.8333333333333333vw;width: 100%;z-index: 2500;
+       .swiper-scrollbar-drag{height: 2.777777777777778vw;background: #1C98D6;top: -2px;}
     }
 }
 //index: 본문 6
 .main_banner {
-    min-height: 500px; margin-top: 80px;padding: 0 6.25vw 0 6.25vw; 
+    min-height: 500px; margin-top: 22.22222222222222vw;padding: 0 6.25vw 0 6.25vw; 
     .banner_wrap {
         text-align: left;margin: 0 auto;
         h3 {font-family: HvNenuBlk;padding-bottom: 0.234375vh;font-size: 5vw;line-height: 2.65625vh;}
@@ -312,10 +312,26 @@ screen and (min-resolution: 3dppx) {
     position: relative;min-height: 328.6111111111111vw; color: #333;line-height: 5vw;margin-bottom: 8.333333333333333vw;
     .bdExplain {
         font-family: HvNenuBlk; padding-top: 33.33333333333333vw;
-        strong {font-size: 13.33333333333333vw; display: block;}
-        span {font-size: 3.888888888888889vw;padding-top: 11.94444444444444vw;display: inline-block;}
+        strong {
+            font-size: 13.33333333333333vw; display: block;padding-bottom: 0.6944444444444444vw; 
+            &::before {
+                content: ""; position: absolute; height: 4.166666666666667vw;width: 1px;background-color: #333;top: 9.444444444444444vw; left: 50%;}
+            &::after {
+
+                content: ""; position: absolute; height: 1px;width: 34.44444444444444vw;background-color: #333;top: 14.16666666666667vw; left: 31%;
+            }
+        }
+        span {
+            font-size: 3.888888888888889vw;padding-top: 11.94444444444444vw;display: inline-block;
+            &.fade.on {
+                p {@include transform(scale(1.3) 0.3s);}
+            }
+        }
         span + span {padding-left: 24.44444444444444vw;}
         p {font-family: aGothic; padding-top: 13.33333333333333vw;font-size: 3.333333333333333vw;font-weight: 500;}
+        &.fade.on {
+            p {@include transform(scale(1.3) 0.5s);}
+        }
     }
     .imgWrap {
         position: absolute; height: 200vw;top:125vw;left:0;

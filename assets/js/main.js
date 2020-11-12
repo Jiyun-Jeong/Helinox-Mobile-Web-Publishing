@@ -11,7 +11,7 @@ $(document).ready(function () {
     var scrollT = $(this).scrollTop();
 
     //brandStory 내부의 텍스트 marquee 효과 나타나기
-    if (scrollT > $('brandStory').offset().top - 300) {
+    if (scrollT > $('.brandStory').offset().top - 300) {
       $('.brandStory').addClass('on');
     }
   });

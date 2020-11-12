@@ -1,98 +1,615 @@
-/*
-Error: Undefined mixin 'animation'.
-        on line 122 of ./main.scss, in `animation'
-        from line 122 of ./main.scss
+@charset "UTF-8";
+.top_visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  overflow: hidden; }
+  .top_visual::before {
+    -webkit-background-size: cover;
+    background-size: cover;
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center; }
+  .top_visual.on::before {
+    -webkit-transform: scale(1);
+    transform: scale(1); }
+  .top_visual .txtwrap {
+    position: relative;
+    text-align: left;
+    color: #fff; }
+    .top_visual .txtwrap > * {
+      -webkit-transition: all 0.3s ease-in-out;
+      -moz-transition: all 0.3s ease-in-out;
+      -o-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
+      opacity: 0; }
+  .top_visual.on .txtwrap > * {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+    opacity: 1; }
 
-117:         @include transform(translate(-50%, -50%) rotate(-8deg));
-118:         @include transition(opacity 1s  3s);
-119:         width: 1000%;
-120:         > div:nth-child(2){padding-left: 50px;}
-121:         .marquee {
-122:             @include animation(scrollMarquee 6s linear infinite);
-123:             position: relative;display: inline-block;line-height: 110px; font-size: 122px; font-family: HvNenuBlk;text-align: left;
-124:             .color {
-125:                 @include transition(opacity 1s 2s);
-126:                 position: absolute; color: #1C98D6;left: -7px;top: -7px;opacity: 0;
-127:             }
+.main_visual {
+  min-height: 166.6666666666667vw;
+  position: relative; }
+  .main_visual::before {
+    -webkit-transition: transform 1.5s ease-in-out;
+    -moz-transition: transform 1.5s ease-in-out;
+    -o-transition: transform 1.5s ease-in-out;
+    transition: transform 1.5s ease-in-out;
+    background-image: url("../img/main/bg1_1x.png"); }
+  .main_visual .txtwrap {
+    left: -20.777778vw;
+    top: -17.777778vw; }
+    .main_visual .txtwrap strong {
+      font-size: 6.666666666666667vw;
+      line-height: 1.3;
+      font-weight: 500; }
+  .main_visual .scrollBtn {
+    position: absolute;
+    bottom: 27.77777777777778vw;
+    left: calc(50% - 4.166666666666667vw); }
+    .main_visual .scrollBtn a {
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      padding-top: 16.66666666666667vw;
+      color: #fff; }
+      .main_visual .scrollBtn a span {
+        position: absolute;
+        top: 0;
+        left: calc(50% - 4.166666666666667vw);
+        width: 8.333333333333333vw;
+        height: 13.88888888888889vw;
+        margin-left: -4.166666666666667vw;
+        border: 0.5555555555555556vw solid #fff;
+        border-radius: 50px; }
+        .main_visual .scrollBtn a span ::before {
+          -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+          -webkit-border-radius: 100%;
+          border-radius: 100%;
+          content: "";
+          position: absolute;
+          top: 2.777777777777778vw;
+          left: 50%;
+          width: 1.666666666666667vw;
+          height: 1.666666666666667vw;
+          margin-left: -0.8333333333333333vw;
+          -webkit-animation: scrollBtn 2s infinite;
+          animation: scrollBtn 2s infinite; }
+@-webkit-keyframes scrollBtn {
+  0% {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+    opacity: 0; }
+  40% {
+    opacity: 1; }
+  80% {
+    -webkit-transform: translate(0, 20px);
+    transform: translate(0, 20px);
+    opacity: 0; }
+  100% {
+    opacity: 0; } }
+@keyframes scrollBtn {
+  0% {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+    opacity: 0; }
+  40% {
+    opacity: 1; }
+  80% {
+    -webkit-transform: translate(0, 20px);
+    transform: translate(0, 20px);
+    opacity: 0; }
+  100% {
+    opacity: 0; } }
+@media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+  .main_visual::before {
+    background-image: url("../img/main/bg1_2x.png"); }
 
-Backtrace:
-./main.scss:122:in `animation'
-./main.scss:122
-C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:348:in `block in visit_mixin'
-C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/stack.rb:98:in `block in with_mixin'
-C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/stack.rb:135:in `with_frame'
-C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/stack.rb:98:in `with_mixin'
-C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:346:in `visit_mixin'
-C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
-C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/stack.rb:79:in `block in with_base'
-C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/stack.rb:135:in `with_frame'
-C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/stack.rb:79:in `with_base'
-C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `visit'
-C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:440:in `block (2 levels) in visit_rule'
-C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:440:in `map'
-C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:440:in `block in visit_rule'
-C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
-C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:438:in `visit_rule'
-C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
-C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/stack.rb:79:in `block in with_base'
-C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/stack.rb:135:in `with_frame'
-C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/stack.rb:79:in `with_base'
-C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `visit'
-C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:440:in `block (2 levels) in visit_rule'
-C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:440:in `map'
-C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:440:in `block in visit_rule'
-C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
-C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:438:in `visit_rule'
-C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
-C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/stack.rb:79:in `block in with_base'
-C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/stack.rb:135:in `with_frame'
-C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/stack.rb:79:in `with_base'
-C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `visit'
-C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:440:in `block (2 levels) in visit_rule'
-C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:440:in `map'
-C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:440:in `block in visit_rule'
-C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
-C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:438:in `visit_rule'
-C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
-C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/stack.rb:79:in `block in with_base'
-C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/stack.rb:135:in `with_frame'
-C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/stack.rb:79:in `with_base'
-C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `visit'
-C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:52:in `map'
-C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
-C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
-C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
-C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
-C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:157:in `visit'
-C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:10:in `visit'
-C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/root_node.rb:36:in `css_tree'
-C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
-C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/engine.rb:389:in `_render_with_sourcemap'
-C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/engine.rb:307:in `render_with_sourcemap'
-C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:462:in `update_stylesheet'
-C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:209:in `each'
-C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:443:in `on_file_changed'
-C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:320:in `block in watch'
-C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-listen-4.0.0/lib/sass-listen/event/config.rb:23:in `call'
-C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:115:in `_process_changes'
-C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:19:in `block in loop_for'
-C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop'
-C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop_for'
-C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:84:in `_wait_for_changes'
-C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:42:in `block in setup'
-C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-listen-4.0.0/lib/sass-listen/internals/thread_pool.rb:6:in `block in add'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Undefined mixin 'animation'.\A         on line 122 of ./main.scss, in `animation'\A         from line 122 of ./main.scss\A \A 117:         @include transform(translate(-50%, -50%) rotate(-8deg));\A 118:         @include transition(opacity 1s  3s);\A 119:         width: 1000%;\A 120:         > div:nth-child(2){padding-left: 50px;}\A 121:         .marquee {\A 122:             @include animation(scrollMarquee 6s linear infinite);\A 123:             position: relative;display: inline-block;line-height: 110px; font-size: 122px; font-family: HvNenuBlk;text-align: left;\A 124:             .color {\A 125:                 @include transition(opacity 1s 2s);\A 126:                 position: absolute; color: #1C98D6;left: -7px;top: -7px;opacity: 0;\A 127:             }"; }
+  .lk_slide1::before {
+    background-image: url("../img/main/lookbook_1_2x.png"); }
+
+  .lk_slide2::before {
+    background-image: url("../img/main/lookbook_2_2x.png"); }
+
+  .lk_slide3::before {
+    background-image: url("../img/main/lookbook_3_2x.png"); }
+
+  .lk_slide4::before {
+    background-image: url("../img/main/lookbook_4_2x.png"); }
+
+  .about_visual::before {
+    background-image: url("../img/about/bg1_2x.png"); } }
+@media screen and (-webkit-min-device-pixel-ratio: 3), screen and (min-resolution: 288dpi), screen and (min-resolution: 3dppx) {
+  .main_visual::before {
+    background-image: url("../img/main/bg1_3x.png"); }
+
+  .lk_slide1::before {
+    background-image: url("../img/main/lookbook_1_3x.png"); }
+
+  .lk_slide2::before {
+    background-image: url("../img/main/lookbook_2_3x.png"); }
+
+  .lk_slide3::before {
+    background-image: url("../img/main/lookbook_3_3x.png"); }
+
+  .lk_slide4::before {
+    background-image: url("../img/main/lookbook_4_3x.png"); }
+
+  .about_visual::before {
+    background-image: url("../img/about/bg1_3x.png"); } }
+.brandStory {
+  min-height: 225.5555555555556vw;
+  position: relative;
+  text-align: center;
+  background: #000;
+  color: #fff;
+  overflow: hidden; }
+  .brandStory::before {
+    content: "";
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8); }
+  .brandStory .marqueeWrap, .brandStory .txtwrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 75vw; }
+  .brandStory .marqueeWrap {
+    -webkit-transform: translate(-50%, -50%) rotate(-8deg);
+    transform: translate(-50%, -50%) rotate(-8deg);
+    -webkit-transition: opacity 1s 3s;
+    -moz-transition: opacity 1s 3s;
+    -o-transition: opacity 1s 3s;
+    transition: opacity 1s 3s;
+    width: 1000%; }
+    .brandStory .marqueeWrap > div:nth-child(2) {
+      padding-left: 13.88888888888889vw; }
+    .brandStory .marqueeWrap .marquee {
+      -webkit-animation: scrollMarquee 7s linear infinite;
+      animation: scrollMarquee 7s linear infinite;
+      position: relative;
+      display: inline-block;
+      line-height: 110px;
+      font-size: 122px;
+      font-family: HvNenuBlk;
+      text-align: left; }
+      .brandStory .marqueeWrap .marquee .color {
+        -webkit-transition: opacity 1s 2s;
+        -moz-transition: opacity 1s 2s;
+        -o-transition: opacity 1s 2s;
+        transition: opacity 1s 2s;
+        position: absolute;
+        color: #1C98D6;
+        left: -1.944444444444444vw;
+        top: -1.944444444444444vw;
+        opacity: 0; }
+  .brandStory .txtwrap {
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-transition: opacity 1s 3s;
+    -moz-transition: opacity 1s 3s;
+    -o-transition: opacity 1s 3s;
+    transition: opacity 1s 3s;
+    opacity: 0; }
+    .brandStory .txtwrap h3 {
+      font-size: 6.111111111111111vw;
+      font-weight: 500;
+      line-height: 1.32; }
+    .brandStory .txtwrap p {
+      font-size: 4.444444444444444vw;
+      font-weight: 300;
+      line-height: 1.56;
+      padding: 15.27777777777778vw 0 13.88888888888889vw; }
+    .brandStory .txtwrap .brandBtn {
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      transition: all 0.3s;
+      display: inline-block;
+      font-weight: 500;
+      top: 2.777777777777778vw;
+      width: 52.77777777777778vw;
+      height: 12.22222222222222vw;
+      line-height: 12.22222222222222vw;
+      border: 0.2777777777777778vw solid #fff; }
+      .brandStory .txtwrap .brandBtn:hover, .brandStory .txtwrap .brandBtn:active {
+        background-color: #1C98D6;
+        color: #000;
+        border-color: #1C98D6; }
+
+.brandStory.on .marqueeWrap {
+  opacity: 0.3; }
+  .brandStory.on .marqueeWrap .marquee .color {
+    opacity: 1; }
+.brandStory.on .txtwrap {
+  opacity: 1; }
+
+@-webkit-keyframes scrollMarquee {
+  100% {
+    transform: translateX(-100%); } }
+@-o-keyframes scrollMarquee {
+  100% {
+    transform: translateX(-100%); } }
+@keyframes scrollMarquee {
+  100% {
+    transform: translateX(-100%); } }
+.bestItem {
+  min-height: 166.6666666666667vw;
+  margin-top: 22.22222222222222vw; }
+  .bestItem > h3 {
+    font-family: HvNenuBlk;
+    font-size: 6.111111111111111vw;
+    line-height: 7.222222222222222vw;
+    padding-bottom: 3.277777777777778vw; }
+  .bestItem > .swiper-container {
+    height: 128.6111111111111vw;
+    margin: 0 -4.166666666666667vw;
+    background-color: #E2E2E2; }
+    .bestItem > .swiper-container > .swiper-wrapper {
+      margin: 0 auto; }
+      .bestItem > .swiper-container > .swiper-wrapper > .swiper-slide > img {
+        padding-top: 24.38888888888889vw;
+        cursor: pointer; }
+      .bestItem > .swiper-container > .swiper-wrapper > .swiper-slide > p {
+        font-size: 3.888888888888889vw;
+        padding: 1.944444444444444vw 0 0;
+        cursor: pointer; }
+      .bestItem > .swiper-container > .swiper-wrapper > .swiper-slide > p + p {
+        margin-bottom: 4.166666666666667vw; }
+      .bestItem > .swiper-container > .swiper-wrapper > .swiper-slide > a {
+        cursor: pointer;
+        font-family: Helvetica;
+        color: #1C98D6 !important;
+        font-weight: 400; }
+      .bestItem > .swiper-container > .swiper-wrapper > .swiper-slide-prev, .bestItem > .swiper-container > .swiper-wrapper .swiper-slide-next {
+        -webkit-transform: scale(0.9);
+        transform: scale(0.9);
+        opacity: 0.7; }
+    .bestItem > .swiper-container .swiper-button-next {
+      right: 20px; }
+    .bestItem > .swiper-container .swiper-button-prev {
+      left: 20px; }
+
+/* 
+ */
+.category {
+  position: relative;
+  min-height: 600px;
+  font-family: HvNenuBlk;
+  font-size: 6.111111111111111vw;
+  text-align: left;
+  line-height: 17px; }
+  .category > h3 {
+    padding: 0 0 31.5px 23px; }
+  .category .swiper-container {
+    padding-bottom: 70px; }
+  .category .swiper-slide {
+    position: relative;
+    width: 69%;
+    padding: 20px 0; }
+    .category .swiper-slide h4 {
+      -webkit-transform: rotate(90deg);
+      transform: rotate(90deg);
+      position: absolute;
+      font-family: HvNenuBdExo;
+      font-size: 54px;
+      line-height: 58px;
+      color: #000; }
+    .category .swiper-slide > img {
+      -webkit-transform: translate(-52px, 90px);
+      transform: translate(-52px, 90px);
+      -webkit-transition: all 1.5s;
+      -moz-transition: all 1.5s;
+      -o-transition: all 1.5s;
+      transition: all 1.5s;
+      max-width: none;
+      /* &:hover, &:focus {
+          @include transform(rotate(360deg));
+          @include transform(scale(1.2) rotateZ(360deg));
+      } */ }
+  .category .swiper-slide:nth-child(1) {
+    background-color: #1EFE69; }
+    .category .swiper-slide:nth-child(1) h4 {
+      top: 120px;
+      left: 52px; }
+  .category .swiper-slide:nth-child(2) {
+    background-color: #BC00FF; }
+    .category .swiper-slide:nth-child(2) h4 {
+      top: 54px;
+      left: 117px; }
+  .category .swiper-slide:nth-child(3) {
+    background-color: #0D5743; }
+    .category .swiper-slide:nth-child(3) h4 {
+      top: 115px;
+      left: 58px; }
+  .category .swiper-slide:nth-child(4) {
+    background-color: #3787D6; }
+    .category .swiper-slide:nth-child(4) h4 {
+      top: 86px;
+      left: 87px; }
+  .category .swiper-slide:nth-child(5) {
+    background-color: #FF5700; }
+    .category .swiper-slide:nth-child(5) h4 {
+      top: 100px;
+      left: 131px; }
+  .category .swiper-slide:nth-child(6) {
+    background-color: #E3FF24; }
+    .category .swiper-slide:nth-child(6) h4 {
+      top: 56px;
+      left: 175px; }
+  .category .swiper-pagination {
+    position: relative;
+    bottom: -24px;
+    left: 285px;
+    width: 13.88888888888889vw; }
+  .category .swiper-button-next:after, .category .swiper-button-prev:after {
+    display: none; }
+  .category .swiper-button-prev {
+    position: absolute;
+    width: 129px;
+    height: 18px;
+    bottom: -13.88888888888889vw;
+    left: 25px; }
+
+.lookbook {
+  min-height: 600px;
+  background: #050505;
+  color: #fff;
+  font-family: HvNenuBdOu;
+  font-size: 27px;
+  line-height: 34px; }
+  .lookbook h3 {
+    padding: 20px 0 10.5px; }
+  .lookbook .swiper-slide {
+    position: relative;
+    height: 468px;
+    width: 360px; }
+    .lookbook .swiper-slide button .lk_btn1 {
+      position: absolute;
+      top: 237.5px;
+      left: 112px; }
+  .lookbook .swiper-slide:nth-child(1) {
+    background-image: url("../img/main/lookbook_1_1x.png"); }
+  .lookbook .swiper-slide:nth-child(2) {
+    background-image: url("../img/main/lookbook_2_1x.png"); }
+  .lookbook .swiper-slide:nth-child(3) {
+    background-image: url("../img/main/lookbook_3_1x.png"); }
+  .lookbook .swiper-slide:nth-child(4) {
+    background-image: url("../img/main/lookbook_4_1x.png"); }
+  .lookbook .swiper-scrollbar {
+    position: static;
+    height: 0.8333333333333333vw;
+    width: 100%;
+    z-index: 2500; }
+    .lookbook .swiper-scrollbar .swiper-scrollbar-drag {
+      height: 2.777777777777778vw;
+      background: #1C98D6;
+      top: -2px; }
+
+.main_banner {
+  min-height: 500px;
+  margin-top: 22.22222222222222vw;
+  padding: 0 6.25vw 0 6.25vw; }
+  .main_banner .banner_wrap {
+    text-align: left;
+    margin: 0 auto; }
+    .main_banner .banner_wrap h3 {
+      font-family: HvNenuBlk;
+      padding-bottom: 0.234375vh;
+      font-size: 5vw;
+      line-height: 2.65625vh; }
+    .main_banner .banner_wrap a {
+      cursor: pointer; }
+      .main_banner .banner_wrap a img {
+        width: 100%; }
+      .main_banner .banner_wrap a p {
+        text-align: left;
+        font-weight: 400;
+        font-size: 3.055555555555556vw;
+        line-height: 2.34375vh;
+        padding-top: 1.25vh; }
+      .main_banner .banner_wrap a > p:last-child {
+        font-size: 2.5vw;
+        padding-top: 0.46875vh;
+        line-height: 1.875vh;
+        color: #979797;
+        padding-bottom: 4.140625vh; }
+
+.about_visual {
+  min-height: 895px;
+  position: relative; }
+  .about_visual::before {
+    -webkit-transition: transform 1.5s ease-in-out;
+    -moz-transition: transform 1.5s ease-in-out;
+    -o-transition: transform 1.5s ease-in-out;
+    transition: transform 1.5s ease-in-out;
+    background-image: url("../img/about/bg1_1x.png"); }
+  .about_visual .txtwrap {
+    position: fixed;
+    text-align: center;
+    top: 259px;
+    /* display: none; */ }
+    .about_visual .txtwrap h3 {
+      font-family: HvNenuCnO;
+      font-size: 4.722222222222222vw;
+      line-height: 1.3;
+      padding-bottom: 9.444444444444444vw; }
+    .about_visual .txtwrap strong {
+      font-size: 8.333333333333333vw;
+      line-height: 1.03;
+      font-weight: 700; }
+
+.sub_visual {
+  min-height: 118.0555555555556vw;
+  background-color: #000;
+  color: #fff; }
+  .sub_visual .txtwrap {
+    padding-top: 75.666667vw;
+    opacity: 0; }
+    .sub_visual .txtwrap p {
+      font-size: 3.611111111111111vw;
+      line-height: 5vw;
+      font-weight: 300; }
+    .sub_visual .txtwrap.on {
+      -webkit-transition: opacity 1s 0.2s;
+      -moz-transition: opacity 1s 0.2s;
+      -o-transition: opacity 1s 0.2s;
+      transition: opacity 1s 0.2s;
+      opacity: 1; }
+
+/* 스크롤다운으로 만났을때 about visual txt 정지, p태그 색갈 바꾸기 js */
+.bdExaplain p, .anywhere p, .gener p, .lighter p, .forHelinoxer p {
+  font-size: 3.333333333333333vw; }
+
+.brandExplain {
+  position: relative;
+  min-height: 328.6111111111111vw;
+  color: #333;
+  line-height: 5vw;
+  margin-bottom: 8.333333333333333vw; }
+  .brandExplain .bdExplain {
+    font-family: HvNenuBlk;
+    padding-top: 33.33333333333333vw; }
+    .brandExplain .bdExplain strong {
+      font-size: 13.33333333333333vw;
+      display: block;
+      padding-bottom: 0.6944444444444444vw; }
+      .brandExplain .bdExplain strong::before {
+        content: "";
+        position: absolute;
+        height: 4.166666666666667vw;
+        width: 1px;
+        background-color: #333;
+        top: 9.444444444444444vw;
+        left: 50%; }
+      .brandExplain .bdExplain strong::after {
+        content: "";
+        position: absolute;
+        height: 1px;
+        width: 34.44444444444444vw;
+        background-color: #333;
+        top: 14.16666666666667vw;
+        left: 31%; }
+    .brandExplain .bdExplain span {
+      font-size: 3.888888888888889vw;
+      padding-top: 11.94444444444444vw;
+      display: inline-block; }
+      .brandExplain .bdExplain span.fade.on p {
+        -webkit-transform: scale(1.3) 0.3s;
+        transform: scale(1.3) 0.3s; }
+    .brandExplain .bdExplain span + span {
+      padding-left: 24.44444444444444vw; }
+    .brandExplain .bdExplain p {
+      font-family: aGothic;
+      padding-top: 13.33333333333333vw;
+      font-size: 3.333333333333333vw;
+      font-weight: 500; }
+    .brandExplain .bdExplain.fade.on p {
+      -webkit-transform: scale(1.3) 0.5s;
+      transform: scale(1.3) 0.5s; }
+  .brandExplain .imgWrap {
+    position: absolute;
+    height: 200vw;
+    top: 125vw;
+    left: 0; }
+    .brandExplain .imgWrap img {
+      float: left; }
+    .brandExplain .imgWrap img:nth-child(1) {
+      padding-left: 4.166666666666667vw;
+      position: relative;
+      width: 47.22222222222222vw; }
+      .brandExplain .imgWrap img:nth-child(1)::before {
+        content: "";
+        position: absolute;
+        border: 1px solid #666; }
+    .brandExplain .imgWrap img:nth-child(2) {
+      float: right;
+      width: 59.44444444444444vw;
+      padding-right: 4.166666666666667vw;
+      padding-bottom: 21.66666666666667vw;
+      padding-top: 4.166666666666667vw; }
+    .brandExplain .imgWrap img:last-child {
+      width: 100vw; }
+
+.aboutTxtWrap {
+  padding: 0 6.527777777777778vw; }
+  .aboutTxtWrap h3 {
+    font-family: HvNenuCnO;
+    font-size: 4.722222222222222vw;
+    line-height: 1.3;
+    color: #1C98D6;
+    font-weight: 300;
+    padding-bottom: 2.222222222222222vw; }
+  .aboutTxtWrap strong {
+    font-size: 8.333333333333333vw; }
+  .aboutTxtWrap p {
+    padding-top: 9.444444444444444vw;
+    font-size: 3.333333333333333vw; }
+  .aboutTxtWrap p + p {
+    padding-top: 6.666666666666667vw; }
+
+.aboutImgWrap img {
+  width: 100vw;
+  padding-top: 35.27777777777778vw; }
+
+.anywhere {
+  min-height: 276.6666666666667vw;
+  padding: 9.722222222222222vw 0;
+  text-align: right; }
+
+.gener {
+  min-height: 294.4444444444444vw;
+  padding: 9.722222222222222vw 0;
+  text-align: left;
+  /* position: relative; */ }
+  .gener button {
+    -webkit-border-radius: 17px;
+    border-radius: 17px;
+    /* position: absolute; */
+    margin-top: 13.88888888888889vw;
+    left: 0;
+    right: 0;
+    border: 1px solid #1C98D6;
+    text-align: center;
+    font-weight: 500;
+    font-size: 3.611111111111111vw;
+    height: 11.11111111111111vw;
+    width: 46.66666666666667vw; }
+
+.lighter {
+  min-height: 199.1666666666667vw;
+  padding: 9.722222222222222vw 0;
+  text-align: right; }
+
+.forHelinoxer {
+  min-height: 75vw;
+  padding: 9.722222222222222vw 0;
+  text-align: left; }
+  .forHelinoxer strong {
+    line-height: 1.2; }
+
+.map {
+  min-height: 67.5vw;
+  padding-top: 35vw;
+  text-align: center; }
+  .map h3 {
+    font-size: 6.111111111111111vw;
+    line-height: 1.36; }
+  .map p {
+    padding-top: 2.5vw;
+    font-size: 3.333333333333333vw;
+    padding-bottom: 5.277777777777778vw; }
+  .map iframe {
+    padding-bottom: 34.16666666666667vw; }
+
+/*# sourceMappingURL=main.css.map */
