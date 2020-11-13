@@ -26,9 +26,9 @@ $(document).ready(function () {
   //본문3 슬라이더
   var mySwiper1 = new Swiper('.bestItem .swiper-container', {
     loop: true,
-    autoplay: {
+/*     autoplay: {
       delay: 2300,
-    },
+    }, */
     pagination: {
       el: '.swiper-pagination',
       type: 'fraction',
