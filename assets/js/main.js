@@ -98,4 +98,9 @@ $(document).ready(function () {
       lastSlideMessage: '마지막 슬라이드',
     }
   });
+
+/*   $('.btnWrap .lk_btn').on('click', function () {
+    $(this).parent().find('.popupImg').child().find('bgPopup').addClass('on').stop().fadeIn();
+    $(this).stop().fadeOut().removeClass('on');
+  }) */
 });

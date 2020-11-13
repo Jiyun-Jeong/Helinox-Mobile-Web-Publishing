@@ -400,28 +400,28 @@
       -moz-transition: all 0.2s;
       -o-transition: all 0.2s;
       transition: all 0.2s; }
-    .lookbook .swiper-slide .btnWrap .lk_btn1 {
+    .lookbook .swiper-slide .btnWrap #lk_btn1 {
       left: 25vw;
       top: -70.27777777777778vw; }
-    .lookbook .swiper-slide .btnWrap .lk_btn2 {
+    .lookbook .swiper-slide .btnWrap #lk_btn2 {
       right: 46vw;
       bottom: 10vw; }
-    .lookbook .swiper-slide .btnWrap .lk_btn3 {
+    .lookbook .swiper-slide .btnWrap #lk_btn3 {
       left: 45vw;
       top: 47.444444vw; }
-    .lookbook .swiper-slide .btnWrap .lk_btn4 {
+    .lookbook .swiper-slide .btnWrap #lk_btn4 {
       right: 33vw;
       bottom: 34vw; }
-    .lookbook .swiper-slide .btnWrap .lk_btn5 {
+    .lookbook .swiper-slide .btnWrap #lk_btn5 {
       left: 35vw;
       top: 53.444444vw; }
-    .lookbook .swiper-slide .btnWrap .lk_btn6 {
+    .lookbook .swiper-slide .btnWrap #lk_btn6 {
       right: 26vw;
       bottom: 47vw; }
-    .lookbook .swiper-slide .btnWrap .lk_btn7 {
+    .lookbook .swiper-slide .btnWrap #lk_btn7 {
       left: 32vw;
       top: 54.444444vw; }
-    .lookbook .swiper-slide .btnWrap .lk_btn8 {
+    .lookbook .swiper-slide .btnWrap #lk_btn8 {
       right: 22vw;
       bottom: 16vw; }
     .lookbook .swiper-slide .popupImg {
@@ -476,25 +476,29 @@
         padding-bottom: 7.361111111111111vw; }
 
 .about_visual {
-  min-height: 248.6111111111111vw;
   position: relative; }
-  .about_visual::before {
-    -webkit-transition: transform 1.5s ease-in-out;
-    -moz-transition: transform 1.5s ease-in-out;
-    -o-transition: transform 1.5s ease-in-out;
-    transition: transform 1.5s ease-in-out;
-    background-image: url("../img/about/bg1_1x.png"); }
-  .about_visual .txtwrap {
+  .about_visual .bg1 {
+    min-height: 248.6111111111111vw;
+    overflow: hidden; }
+    .about_visual .bg1::before {
+      -webkit-transition: transform 1.5s ease-in-out;
+      -moz-transition: transform 1.5s ease-in-out;
+      -o-transition: transform 1.5s ease-in-out;
+      transition: transform 1.5s ease-in-out;
+      background-image: url("../img/about/bg1_1x.png"); }
+  .about_visual > .txtwrap {
     position: fixed;
     text-align: center;
     top: 71.94444444444444vw;
-    /* display: none; */ }
-    .about_visual .txtwrap h3 {
+    /* display: none; */
+    color: #fff;
+    width: 100%; }
+    .about_visual > .txtwrap h3 {
       font-family: HvNenuCnO;
       font-size: 4.722222222222222vw;
       line-height: 1.3;
       padding-bottom: 9.444444444444444vw; }
-    .about_visual .txtwrap strong {
+    .about_visual > .txtwrap strong {
       font-size: 8.333333333333333vw;
       line-height: 1.03;
       font-weight: 700; }

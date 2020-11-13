@@ -8,7 +8,7 @@ $(document).ready(function () {
         /* 985 */
         if ( targetTop >= fixTop  ) {
             console.log(targetTop);
-            $('.top_visual .txtwrap').find('h3').css({color: '#1C98D6'}).parent().css({position: 'absolute', top: fixTop});
+            $('.about_visual > .txtwrap').find('h3').css({color: '#1C98D6'}).parent().css({position: 'absolute', top: fixTop + 200});
         }
     });
 });
