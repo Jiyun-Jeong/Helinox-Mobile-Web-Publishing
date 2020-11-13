@@ -92,7 +92,7 @@ header, nav, section, footer {display: block;}
 .font2 {font-family: Helvetica;}
 .mt_50 {margin-top: 13.88888888888889vw;}
 
-body {font-family: aGothic, 'segoe UI'; font-size: 5vw; font-weight: 500;/* cursor: url("../../cursor.cur"), pointer; */line-height: 5vw; word-break: keep-all;color: #333;text-align: center;}
+body {font-family: aGothic, 'segoe UI'; font-size: 5vw; font-weight: 500;/* cursor: url("../../mouse.cur"), auto; */line-height: 5vw; word-break: keep-all;color: #333;text-align: center;}
 #wrap {overflow: hidden;min-width: 320px;}
 
 #header {
@@ -136,12 +136,12 @@ body {font-family: aGothic, 'segoe UI'; font-size: 5vw; font-weight: 500;/* curs
     &.active {
         .line {background: #000 !important;}
         .top {
-            @include transform(45deg);
+            @include transform(rotate(45deg));
             top: 2.777777777777778vw;
         }
         .mid {left: 100%;}
         .btm {
-            @include transform(-45deg);
+            @include transform(rotate(-45deg));
             top: 2.777777777777778vw;
         }
     }
@@ -194,23 +194,24 @@ body {font-family: aGothic, 'segoe UI'; font-size: 5vw; font-weight: 500;/* curs
 // Footer
 #footer {
     @include border-box;
-    background: #000; height: 122.2222222222222vw; color: #fff; padding: 18.88888888888889vw 10.55555555555556vw 11.66666666666667vw;text-align: left;font-size: 3.888888888888889vw;
+    background: #000; height: 122.2222222222222vw; color: #fff; padding: 11.66666666666667vw 10.55555555555556vw;text-align: left;font-size: 3.888888888888889vw;
     svg {width: 8.333333333333333vw;height: 8.333333333333333vw;}
     .legal a, .cs p  {font-size: 3.333333333333333vw;font-weight: 300;}
-    strong {margin-bottom: 2.222222222222222vw;} 
+    strong {} 
     .legal {
         float: left;height: 19.44444444444444vw;width: 23.33333333333333vw;
-        a {display: block;height: 3.333333333333333vw;width: 36.38888888888889vw;}
+        a {display: block;height: 3.333333333333333vw;width: 36.38888888888889vw;padding-top: 0.5vw}
         a + a {padding-top: 1.666666666666667vw;}
         a:last-child {padding-bottom: 15.27777777777778vw;}
     }
     .social { 
         float: right; width: 28.33333333333333vw; height: 13.88888888888889vw; 
         strong {display: block;}
-        a img{width: 8.333333333333333vw;height: 8.333333333333333vw;}
+        a img{width: 8.333333333333333vw;height: 8.333333333333333vw;padding-top: 0.5vw;}
     }
     .cs {
         display: block; width: 36.38888888888889vw; height: 13.88888888888889vw;clear: both;padding-top: 17.5vw;padding-bottom: 13.05555555555556vw;
+        p {padding-top: 0.5vw;}
     }
     .address {
         line-height: 4.166666666666667vw; font-size: 2.638888888888889vw; 

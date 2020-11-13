@@ -115,7 +115,7 @@ body {
   font-family: aGothic, 'segoe UI';
   font-size: 5vw;
   font-weight: 500;
-  /* cursor: url("../../cursor.cur"), pointer; */
+  /* cursor: url("../../mouse.cur"), auto; */
   line-height: 5vw;
   word-break: keep-all;
   color: #333;
@@ -206,14 +206,14 @@ body {
   .btn_menu.active .line {
     background: #000 !important; }
   .btn_menu.active .top {
-    -webkit-transform: 45deg;
-    transform: 45deg;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
     top: 2.777777777777778vw; }
   .btn_menu.active .mid {
     left: 100%; }
   .btn_menu.active .btm {
-    -webkit-transform: -45deg;
-    transform: -45deg;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
     top: 2.777777777777778vw; }
 
 /* 네비게이션 */
@@ -344,7 +344,7 @@ body {
   background: #000;
   height: 122.2222222222222vw;
   color: #fff;
-  padding: 18.88888888888889vw 10.55555555555556vw 11.66666666666667vw;
+  padding: 11.66666666666667vw 10.55555555555556vw;
   text-align: left;
   font-size: 3.888888888888889vw; }
   #footer svg {
@@ -353,8 +353,6 @@ body {
   #footer .legal a, #footer .cs p {
     font-size: 3.333333333333333vw;
     font-weight: 300; }
-  #footer strong {
-    margin-bottom: 2.222222222222222vw; }
   #footer .legal {
     float: left;
     height: 19.44444444444444vw;
@@ -362,7 +360,8 @@ body {
     #footer .legal a {
       display: block;
       height: 3.333333333333333vw;
-      width: 36.38888888888889vw; }
+      width: 36.38888888888889vw;
+      padding-top: 0.5vw; }
     #footer .legal a + a {
       padding-top: 1.666666666666667vw; }
     #footer .legal a:last-child {
@@ -375,7 +374,8 @@ body {
       display: block; }
     #footer .social a img {
       width: 8.333333333333333vw;
-      height: 8.333333333333333vw; }
+      height: 8.333333333333333vw;
+      padding-top: 0.5vw; }
   #footer .cs {
     display: block;
     width: 36.38888888888889vw;
@@ -383,6 +383,8 @@ body {
     clear: both;
     padding-top: 17.5vw;
     padding-bottom: 13.05555555555556vw; }
+    #footer .cs p {
+      padding-top: 0.5vw; }
   #footer .address {
     line-height: 4.166666666666667vw;
     font-size: 2.638888888888889vw; }

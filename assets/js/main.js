@@ -26,9 +26,9 @@ $(document).ready(function () {
   //본문3 슬라이더
   var mySwiper1 = new Swiper('.bestItem .swiper-container', {
     loop: true,
-/*     autoplay: {
+    autoplay: {
       delay: 2300,
-    }, */
+    },
     pagination: {
       el: '.swiper-pagination',
       type: 'fraction',
@@ -55,12 +55,12 @@ $(document).ready(function () {
       el: '.swiper-pagination',
       type: 'fraction',
     },
-    /* autoplay: {
+/*     autoplay: {
       delay: 2300,
     }, */
-    spaceBetween: 30, //각 슬라이더 사이 공간
-    slidesPerView: 'auto', //한 화면에 보여질 슬라이더 개수 기본1
-    centeredSlides: true, //슬라이더 가운데 중요 슬라이더 위치
+    spaceBetween: 0, //각 슬라이더 사이 공간
+    slidesPerView: 1.3, //한 화면에 보여질 슬라이더 개수 기본1
+    //centeredSlides: true, //슬라이더 가운데 중요 슬라이더 위치
     scrollbar: {
       el: '.swiper-scrollbar',
       draggable: true,    //스크롤바를 직접 드래그해서 이동가능
@@ -78,7 +78,7 @@ $(document).ready(function () {
 
 
 //본문5 슬라이더
-  var mySwiper2 = new Swiper('.lookbook .swiper-container', {
+  var mySwiper3 = new Swiper('.lookbook .swiper-container', {
     pagination: {
       type: 'bullets',
       bulletElement: 'span',
