@@ -189,7 +189,8 @@ screen and (min-resolution: 3dppx) {
     > h3 { padding: 0 0 8.75vw 6.388888888888889vw;}
     .swiper-container {padding-bottom: 19.44444444444444vw;}
     .swiper-slide {
-        position: relative;width: 70.83333333333333vw; padding: 5.555555555555556vw 0;
+        @include border-box;
+        position: relative;width: 70.83333333333333vw; padding: 5.555555555555556vw 10.333333vw;
         .categoryWrap {
             h4 {
                 @include transform(rotate(90deg));
@@ -198,41 +199,41 @@ screen and (min-resolution: 3dppx) {
             > img {
                 @include transform(translate(-14.44444444444444vw, 25vw));
                 @include transition(all 1.5s);
-                max-width: none; width: 91.94444444444444vw; 
-                &:hover, &:focus {
+                max-width: none; width: 81.944444vw; 
+/*                 &:hover, &:focus {
                     @include transform(scale(1.2));
-                }
+                } */
             }
         }
-        &:nth-child(1) {
-            background-color: #1EFE69;
-            h4 {top: 33.33333333333333vw; left: 16.444444vw;}
+        &:nth-child(1) .categoryWrap {
+            background-color: #1EFE69; 
+            h4 {top: 32.333333vw; left: 18.444444vw;}
         }
-        &:nth-child(2) {
+        &:nth-child(2) .categoryWrap {
             background-color: #BC00FF;
-            h4 {top: 15vw; left: 32.5vw;}
+            h4 {top: 14vw; left: 36.5vw;}
         }
-        &:nth-child(3) {
+        &:nth-child(3) .categoryWrap {
             background-color: #0D5743;
-            h4 {top: 31.94444444444444vw; left: 16.11111111111111vw;}
+            h4 {top: 30.8vw; left: 20.111111vw;}
         }
-        &:nth-child(4) {
+        &:nth-child(4) .categoryWrap {
             background-color: #3787D6;
-            h4 {top: 23.88888888888889vw; left: 24.16666666666667vw;}
+            h4 {top: 22.7vw; left: 28.166667vw;}
         }
-        &:nth-child(5) {
+        &:nth-child(5) .categoryWrap {
             background-color: #FF5700;
-            h4 {top: 27.77777777777778vw; left: 38.388889vw;}
+            h4 {top: 26.5vw; left: 40.388889vw;}
         }
-        &:nth-child(6) {
+        &:nth-child(6) .categoryWrap {
             background-color: #E3FF24;
-            h4 {top: 15.55555555555556vw; left: 48.61111111111111vw;}
+            h4 {top: 15.55555555555556vw; left: 52.611111vw;}
         }
     }
 
     .swiper-pagination {position: relative; bottom: -6.666666666666667vw;left: 79.16666666666667vw;width: 13.88888888888889vw;}
     .swiper-button-next:after, .swiper-button-prev:after {display: none;}
-    .swiper-button-prev {position: absolute; width: 35.83333333333333vw;height: 1vw;bottom: -13.88888888888889vw; left: 6.944444444444444vw;padding-top: 68vw;}
+    .swiper-button-prev {position: absolute; width: 35.83333333333333vw;height: 1vw;bottom: -13.88888888888889vw; left: 6.944444444444444vw;padding-top: 62vw;}
 }
 
 //index: 본문5
@@ -244,8 +245,13 @@ screen and (min-resolution: 3dppx) {
         background: no-repeat center;height: 130vw; width: 100vw;position: relative;
         /* > img {height: 130vw; width: 100vw;} */ 
         .btnWrap {
-            button {position: absolute;}
-            .lk_btn1 {left: 25vw; top: 64.44444444444444vw; }
+            button {
+                position: absolute;
+            }
+            &.fade.on {
+                @include transition(all 0.2s);
+            }
+            .lk_btn1 {left: 25vw; top: -70.27777777777778vw; }
             .lk_btn2 {right: 46vw; bottom: 10vw; }
             .lk_btn3 {left: 45vw; top: 47.444444vw; }
             .lk_btn4 {right: 33vw; bottom:34vw; }
@@ -307,10 +313,20 @@ screen and (min-resolution: 3dppx) {
         h3 {font-family: HvNenuCnO; font-size: 4.722222222222222vw; line-height: 1.3;padding-bottom: 9.444444444444444vw;}
         strong {font-size: 8.333333333333333vw;line-height: 1.03;font-weight: 700;}
     }
-    
+    .sub_visual {
+        display:block; background-color: #000; color: #fff;height: 118.0555555555556vw;width: 100vw;top: 425px;
+        .txtwrap {
+            padding-top: 75.666667vw;opacity: 0;
+            p {font-size: 3.611111111111111vw; line-height: 5vw;font-weight: 300;}
+            &.on {
+                @include transition (opacity 1s 0.2s);
+                opacity: 1;
+            }
+        }
+    }
 }
-.sub_visual {
-    min-height: 118.0555555555556vw; background-color: #000;color: #fff;
+/* .sub_visual {
+    background-color: #000;color: #fff;
     .txtwrap {
         padding-top: 75.666667vw;opacity: 0;
         p {font-size: 3.611111111111111vw; line-height: 5vw;font-weight: 300;}
@@ -319,7 +335,7 @@ screen and (min-resolution: 3dppx) {
             opacity: 1;
         }
     }
-}
+} */
 /* 스크롤다운으로 만났을때 about visual txt 정지, p태그 색갈 바꾸기 js */
 .bdExaplain p, .anywhere p, .gener p, .lighter p, .forHelinoxer p {font-size: 3.333333333333333vw;}
 .brandExplain {

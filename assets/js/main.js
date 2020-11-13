@@ -59,7 +59,7 @@ $(document).ready(function () {
       delay: 2300,
     }, */
     spaceBetween: 0, //각 슬라이더 사이 공간
-    slidesPerView: 1.3, //한 화면에 보여질 슬라이더 개수 기본1
+    slidesPerView: 1.2, //한 화면에 보여질 슬라이더 개수 기본1
     //centeredSlides: true, //슬라이더 가운데 중요 슬라이더 위치
     scrollbar: {
       el: '.swiper-scrollbar',
