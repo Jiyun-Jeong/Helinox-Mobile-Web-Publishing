@@ -42,7 +42,7 @@
   src: url("../fonts/HelveticaNeueLTStd-CnO.eot");
   src: url("../fonts/HelveticaNeueLTStd-CnO.eot#iefix") format("embedded-opentype"), url("../fonts/HelveticaNeueLTStd-CnO.woff2") format("woff2"), url("../fonts/HelveticaNeueLTStd-CnO.woff") format("woff"), url("../fonts/HelveticaNeueLTStd-CnO.otf") format("opentype"); }
 /* 태그 초기화 */
-body, ul, li, h1, h2, h3, h4, h5, h6, p {
+body, ul, li, h1, h2, h3, h4, h5, h6, p, button {
   margin: 0;
   padding: 0; }
 

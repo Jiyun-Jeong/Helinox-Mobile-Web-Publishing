@@ -99,8 +99,10 @@ $(document).ready(function () {
     }
   });
 
-/*   $('.btnWrap .lk_btn').on('click', function () {
-    $(this).parent().find('.popupImg').child().find('bgPopup').addClass('on').stop().fadeIn();
-    $(this).stop().fadeOut().removeClass('on');
-  }) */
+
+
+  $('.btnWrap .lk_btn').on('click', function () {
+    var tgNum = $(this).index();
+    $(this).toggleClass('on').parent().next().children().eq(tgNum).stop().fadeToggle();
+  })
 });

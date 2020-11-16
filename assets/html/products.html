@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Products</title>
+    <link rel="apple-touch-icon" href="../img/common/helinox-logo-bgicon.png"><!-- 아이폰 바로가기 아이콘 -->
+    <link rel="shortcut icon" href="../img/common/helinox-logo-bgicon.png"><!-- 안드로이드폰 바로가기 아이콘 -->
     <link rel="icon" href="../img/common/favicon.ico"> <!-- 파비콘 -->
     <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/main.css">
@@ -66,7 +68,7 @@
             </h1>
             <button class="shopping">
                 <div class="blind-b">장바구니</div>
-                <a href="">
+                <a href="#">
                     <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 209 209"
                         style="enable-background:new 0 0 209 209;" xml:space="preserve">
@@ -98,11 +100,11 @@
                 <li class="gnb2">
                     <a href="products.html">Product</a>
                     <ul>
-                        <li><a href="">Outdoor Line</a></li>
-                        <li><a href="">Home Line</a></li>
-                        <li><a href="">Tactical Line</a></li>
-                        <li><a href="">Limited Line</a></li>
-                        <li><a href="">Acc</a></li>
+                        <li><a href="products.html">Outdoor Line</a></li>
+                        <li><a href="#">Home Line</a></li>
+                        <li><a href="#">Tactical Line</a></li>
+                        <li><a href="#">Limited Line</a></li>
+                        <li><a href="#">Acc</a></li>
                     </ul>
                 </li>
                 <li class="gnb3">
@@ -119,13 +121,16 @@
     
     <section id="content">
         <h2 class="blind-b">Outline Line 상품</h2>
-        <article class="products">
+        <article class="products_subTit">
             <div class="subtitle">
-                <img src="../img/products/title_1_1x.png" alt="" srcset="../img/products/title_1_2x.png 2x, ../img/products/title_1_3x.png 3x">
-                <div class="txt_wrap">
-                    <p>OUTDOOR LINE</p>
-                </div>
+                <div class="subImg"></div>
             </div>
+            <div class="txt_wrap">
+                <p>OUTDOOR LINE</p>
+            </div>
+        </article>
+
+        <article class="products">
             <div id="productsWrap">
                 <ul role="tablist" class="tablist" aria-label="아웃도어 라인">
                     <li role="tab" class="tab fisrt" id="tab1" aria-controls="tabpanel1">체어</li>
@@ -137,7 +142,11 @@
                 </ul>
                 <div role="tabpannel" class="tabpannel" id="tabpanel1" aira-labelledby="tab1">
                     <p>총 80개 상품</p>
-                    <input type="text">추천순
+                    <select name="option" id="showOption">
+                        <option value="">추천순</option>
+                        <option value="">가격낮은순</option>
+                        <option value="">가격높은순</option>
+                    </select>
                     <div class="itemsWrap">
                         <div class="items">
                             <div class="imgwrap">
@@ -173,6 +182,7 @@
                                 <p>헬리녹스 체어원 / 스트라이프 블루<br>125,000원</p>
                             </div>
                         </div>
+                        <button type="button"><span class="blind-b"></span>View more +</button>
                     </div>
                 </div>
             </div>
@@ -183,7 +193,6 @@
                 </button>
             </div>
         </article>
-    
     </section>
 
     <footer id="footer" class="clearfix">

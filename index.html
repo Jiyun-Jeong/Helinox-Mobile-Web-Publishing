@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Helinox </title>
+    <link rel="apple-touch-icon" href="assets/img/common/helinox-logo-bgicon.png"><!-- 아이폰 바로가기 아이콘 -->
+    <link rel="shortcut icon" href="assets/img/common/helinox-logo-bgicon.png"><!-- 안드로이드폰 바로가기 아이콘 -->
     <link rel="icon" href="assets/img/common/favicon.ico"> <!-- 파비콘 -->
     <link rel="stylesheet" href="assets/css/swiper-bundle.css">
     <link rel="stylesheet" href="assets/css/common.css">
@@ -273,23 +275,23 @@
                 <div class="swiper-wrapper">
                     <div class="swiper-slide lk_slide1">
                         <img src="assets/img/main/lookbook_1_1x.png" alt="헬리녹스 캠핑 의자에 앉아있는 남자 두명" srcset="assets/img/main/lookbook_1_2x.png 2x, assets/img/main/lookbook_1_3x.png 3x" class="fade left">
-                        <div class="btnWrap fade up">
-                            <button class="lk_btn" id="lk_btn1" type="button">
-                                <img src="assets/img/icon/more_1x.png" alt="더보기">
-                            </button>
-                            <button class="lk_btn" id="lk_btn2" type="button">
-                                <img src="assets/img/icon/more_1x.png" alt="더보기">
-                            </button>
+                        <div class="btnWrap">
+                            <button class="lk_btn" id="lk_btn1" type="button"><span class="blinb-b"></span></button>
+                            <button class="lk_btn" id="lk_btn2" type="button"><span class="blinb-b"></span></button>
                         </div>
                         <div class="popupImg">
-                            <div class="bgPopup">
-                                <p>헬리녹스 택티컬 테이블 L / 코요테 탄</p>
-                                <img src="assets/img/main/lookbook_popup_1_1x.png" alt="택티컬 라인 테이블" srcset="assets/img/main/lookbook_popup_1_2x.png 2x, assets/img/main/lookbook_popup_1_3x.png 3x">
-                                <a href="" class="font2">View More +</a>
+                            <div class="bgPopup" id="lk_popup1">
+                                <p>헬리녹스 택티컬 테이블 L<br>코요테 탄</p>
+                                <div>
+                                    <img src="assets/img/main/lookbook_popup_1_1x.png" alt="택티컬 라인 테이블" srcset="assets/img/main/lookbook_popup_1_2x.png 2x, assets/img/main/lookbook_popup_1_3x.png 3x">
+                                </div>
+                                <a href="#" class="font2">View More +</a>
                             </div>
-                            <div>
-                                <p>헬리녹스 택티컬 선셋체어 / 코요테 탄</p>
-                                <img src="assets/img/main/lookbook_popup_2_1x.png" alt="택티컬 라인 체어" srcset="assets/img/main/lookbook_popup_2_2x.png 2x, assets/img/main/lookbook_popup_2_3x.png 3x">
+                            <div class="bgPopup" id="lk_popup2">
+                                <p>헬리녹스 택티컬 선셋체어<br>코요테 탄</p>
+                                <div>
+                                    <img src="assets/img/main/lookbook_popup_2_1x.png" alt="택티컬 라인 체어" srcset="assets/img/main/lookbook_popup_2_2x.png 2x, assets/img/main/lookbook_popup_2_3x.png 3x">
+                                </div>
                                 <a href="#" class="font2">View More +</a>
                             </div>
                         </div>
@@ -297,34 +299,70 @@
                     <div class="swiper-slide lk_slide2">
                         <img src="assets/img/main/lookbook_2_1x.png" alt="룩북 이미지2" srcset="assets/img/main/lookbook_2_2x.png 2x, assets/img/main/lookbook_2_3x.png 3x">
                         <div class="btnWrap">
-                            <button class="lk_btn" id="lk_btn3" type="button">
-                                <img src="assets/img/icon/more_1x.png" alt="더보기">
-                            </button>
-                            <button class="lk_btn" id="lk_btn4" type="button">
-                                <img src="assets/img/icon/more_1x.png" alt="더보기">
-                            </button>
+                            <button class="lk_btn" id="lk_btn3" type="button"><span class="blinb-b"></span></button>
+                            <button class="lk_btn" id="lk_btn4" type="button"><span class="blinb-b"></span></button>
+                        </div>
+                        <div class="popupImg">
+                            <div class="bgPopup" id="lk_popup3">
+                                <p>Filson x Helinox Table M<br>Light Shrub Camo</p>
+                                <div>
+                                    <img src="assets/img/main/lookbook_popup_3_1x.png" alt="택티컬 라인 카모 테이블" srcset="assets/img/main/lookbook_popup_3_2x.png 2x, assets/img/main/lookbook_popup_3_3x.png 3x">
+                                </div>
+                                <a href="#" class="font2">View More +</a>
+                            </div>
+                            <div class="bgPopup" id="lk_popup4">
+                                <p>Filson x Helinox Sunset Chair<br>Light Shrub Camo</p>
+                                <div>
+                                    <img src="assets/img/main/lookbook_popup_4_1x.png" alt="택티컬 라인 카모 체어" srcset="assets/img/main/lookbook_popup_4_2x.png 2x, assets/img/main/lookbook_popup_4_3x.png 3x">
+                                </div>
+                                <a href="#" class="font2">View More +</a>
+                            </div>
                         </div>
                     </div>
                     <div class="swiper-slide lk_slide3">
                         <img src="assets/img/main/lookbook_3_1x.png" alt="룩북 이미지3" srcset="assets/img/main/lookbook_3_2x.png 2x, assets/img/main/lookbook_3_3x.png 3x">
                         <div class="btnWrap">
-                            <button class="lk_btn" id="lk_btn5" type="button">
-                                <img src="assets/img/icon/more_1x.png" alt="더보기">
-                            </button>
-                            <button class="lk_btn" id="lk_btn6" type="button">
-                                <img src="assets/img/icon/more_1x.png" alt="더보기">
-                            </button>
+                            <button class="lk_btn" id="lk_btn5" type="button"><span class="blinb-b"></span></button>
+                            <button class="lk_btn" id="lk_btn6" type="button"><span class="blinb-b"></span></button>
+                        </div>
+                        <div class="popupImg">
+                            <div class="bgPopup" id="lk_popup5">
+                                <p>Filson x Helinox Sunset Chair<br>Coyote Tan</p>
+                                <div>
+                                    <img src="assets/img/main/lookbook_popup_5_1x.png" alt="택티컬 라인 코요탄 테이블" srcset="assets/img/main/lookbook_popup_5_2x.png 2x, assets/img/main/lookbook_popup_5_3x.png 3x">
+                                </div>
+                                <a href="#" class="font2">View More +</a>
+                            </div>
+                            <div class="bgPopup" id="lk_popup6">
+                                <p>Filson x Helinox Table M<br>Coyote Tan</p>
+                                <div>
+                                    <img src="assets/img/main/lookbook_popup_6_1x.png" alt="택티컬 라인 코요탄 체어" srcset="assets/img/main/lookbook_popup_6_2x.png 2x, assets/img/main/lookbook_popup_6_3x.png 3x">
+                                </div>
+                                <a href="#" class="font2">View More +</a>
+                            </div>
                         </div>
                     </div>
                     <div class="swiper-slide lk_slide4">
                         <img src="assets/img/main/lookbook_4_1x.png" alt="룩북 이미지4" srcsec="assets/img/main/lookbook_4_2x.png 2x, assets/img/main/lookbook_4_3x.png 3x">
                         <div class="btnWrap">
-                            <button class="lk_btn" id="lk_btn7" type="button">
-                                <img src="assets/img/icon/more_1x.png" alt="더보기">
-                            </button>
-                            <button class="lk_btn" id="lk_btn8" type="button">
-                                <img src="assets/img/icon/more_1x.png" alt="더보기">
-                            </button>
+                            <button class="lk_btn" id="lk_btn7" type="button"><span class="blinb-b"></span></button>
+                            <button class="lk_btn" id="lk_btn8" type="button"><span class="blinb-b"></span></button>
+                        </div>
+                        <div class="popupImg">
+                            <div class="bgPopup" id="lk_popup7">
+                                <p>헬리녹스 선셋체어<br>그린 블록</p>
+                                <div>
+                                    <img src="assets/img/main/lookbook_popup_7_1x.png" alt="아웃도어 라인 선셋체어 그린 블록" srcset="assets/img/main/lookbook_popup_7_2x.png 2x, assets/img/main/lookbook_popup_7_3x.png 3x">
+                                </div>
+                                <a href="#" class="font2">View More +</a>
+                            </div>
+                            <div class="bgPopup" id="lk_popup8">
+                                <p>헬리녹스 체어원<br>트라이앵글 그린</p>
+                                <div>
+                                    <img src="assets/img/main/lookbook_popup_8_1x.png" alt="아웃도어 라인 체어원 트라이앵글 그린" srcset="assets/img/main/lookbook_popup_8_2x.png 2x, assets/img/main/lookbook_popup_8_3x.png 3x">
+                                </div>
+                                <a href="#" class="font2">View More +</a>
+                            </div>
                         </div>
                     </div>
                 </div>
