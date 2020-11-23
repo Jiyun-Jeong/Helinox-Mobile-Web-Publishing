@@ -404,7 +404,6 @@
       position: absolute;
       width: 24px;
       height: 24px;
-      opacity: 0;
       background: url("../img/icon/lookbookBtn_plus.svg"); }
       .lookbook .swiper-slide .btnWrap button img {
         width: 100%; }
@@ -417,20 +416,20 @@
       right: 30vw;
       bottom: 10vw; }
     .lookbook .swiper-slide .btnWrap #lk_btn3 {
-      left: 45vw;
-      top: 47.444444vw; }
+      left: 26vw;
+      top: 58.444444vw; }
     .lookbook .swiper-slide .btnWrap #lk_btn4 {
-      right: 33vw;
-      bottom: 34vw; }
+      right: 23vw;
+      bottom: 25vw; }
     .lookbook .swiper-slide .btnWrap #lk_btn5 {
-      left: 35vw;
-      top: 53.444444vw; }
+      left: 25vw;
+      top: 70.444444vw; }
     .lookbook .swiper-slide .btnWrap #lk_btn6 {
-      right: 26vw;
-      bottom: 47vw; }
+      right: 30vw;
+      bottom: 22vw; }
     .lookbook .swiper-slide .btnWrap #lk_btn7 {
-      left: 32vw;
-      top: 54.444444vw; }
+      left: 37vw;
+      top: 67.444444vw; }
     .lookbook .swiper-slide .btnWrap #lk_btn8 {
       right: 22vw;
       bottom: 16vw; }
@@ -468,14 +467,14 @@
       top: 15.277778vw;
       left: 6.944444444444444vw; }
     .lookbook .swiper-slide .popupImg #lk_popup6 {
-      bottom: 17.388889vw;
+      bottom: 29.388889vw;
       right: 10.888889vw; }
     .lookbook .swiper-slide .popupImg #lk_popup7 {
-      top: 3.277778vw;
-      left: 6.944444444444444vw; }
+      top: 12.277778vw;
+      left: 19.944444vw; }
     .lookbook .swiper-slide .popupImg #lk_popup8 {
-      bottom: 32.388889vw;
-      right: 4.888889vw; }
+      bottom: 23.388889vw;
+      right: 3.888889vw; }
   .lookbook .swiper-scrollbar {
     position: static;
     height: 0.8333333333333333vw;

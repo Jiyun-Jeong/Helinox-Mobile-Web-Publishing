@@ -249,17 +249,17 @@ screen and (min-resolution: 3dppx) {
             button {
                 @include bgsize(cover);
                 @include transition(opacity 0.3s 0.5s);
-                position: absolute;width: 24px;height: 24px;opacity: 0;background: url("../img/icon/lookbookBtn_plus.svg");
+                position: absolute;width: 24px;height: 24px;background: url("../img/icon/lookbookBtn_plus.svg");
                 img {width: 100%;}
                 &.on {background-image: url("../img/icon/lookbookBtn_min.svg");}
             }
             #lk_btn1 {left: 25vw; top: 70.27777777777778vw; }
             #lk_btn2 {right: 30vw; bottom: 10vw; }
-            #lk_btn3 {left: 45vw; top: 47.444444vw; }
-            #lk_btn4 {right: 33vw; bottom:34vw; }
-            #lk_btn5 {left: 35vw; top: 53.444444vw; }
-            #lk_btn6 {right: 26vw; bottom:47vw; }
-            #lk_btn7 {left: 32vw; top: 54.444444vw; }
+            #lk_btn3 {left: 26vw; top: 58.444444vw; }
+            #lk_btn4 {right: 23vw; bottom: 25vw; }
+            #lk_btn5 {left: 25vw; top: 70.444444vw; }
+            #lk_btn6 {right: 30vw; bottom: 22vw; }
+            #lk_btn7 {left: 37vw; top: 67.444444vw; }
             #lk_btn8 {right: 22vw; bottom:16vw; }
         }
         .popupImg {
@@ -275,9 +275,9 @@ screen and (min-resolution: 3dppx) {
             #lk_popup3 {top: 3.277778vw; left: 6.944444444444444vw;}
             #lk_popup4 {bottom: 32.388889vw; right: 4.888889vw;}
             #lk_popup5 {top: 15.277778vw; left: 6.944444444444444vw;}
-            #lk_popup6 {bottom: 17.388889vw; right: 10.888889vw;}
-            #lk_popup7 {top: 3.277778vw; left: 6.944444444444444vw;}
-            #lk_popup8 {bottom: 32.388889vw; right: 4.888889vw;}
+            #lk_popup6 {bottom: 29.388889vw; right: 10.888889vw;}
+            #lk_popup7 {top: 12.277778vw; left: 19.944444vw;}
+            #lk_popup8 {bottom: 23.388889vw; right: 3.888889vw;}
         }
     }
 /*     .swiper-slide:nth-child(1) {
