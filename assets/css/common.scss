@@ -98,13 +98,12 @@ body {font-family: aGothic, 'segoe UI'; font-size: 5vw; font-weight: 500;/* curs
 #header {
     @include transition(all 0.5s ease-in-out);
     position: fixed; top: 0; left: 0;width: 100%; height:13.88888888888889vw; z-indeX: 1000;
-    &.load {top: 0;} //부모선택자를 &로 대신함
+    &.load {top: 0;}
     &.bgchange {
         background: #fff;border-bottom: 1px solid #e5e5e5;
         #logo .st0 {fill: #000;}
         .shopping a .shop {fill:#000;}
         .btn_menu .line{background: #000;}
-        
     }
 }
 .logo {

@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Helinox </title>
-    <link rel="apple-touch-icon" href="assets/img/common/iphone_icon.png"><!-- 아이폰 바로가기 아이콘 114px -->
-    <link rel="shortcut icon" href="assets/img/common/androd_icon.png"><!-- 안드로이드폰 바로가기 아이콘 72px -->
+    <link rel="apple-touch-icon" href="assets/img/common/iphone_icon.png">
+    <link rel="shortcut icon" href="assets/img/common/androd_icon.png">
     <link rel="stylesheet" href="assets/css/swiper-bundle.css">
     <link rel="stylesheet" href="assets/css/common.css">
     <link rel="stylesheet" href="assets/css/main.css">
@@ -16,10 +16,14 @@
 </head>
 
 <body>
+<!--     <div id="skip">
+        <a href="#fullpage">본문 바로가기</a>
+      </div> -->
+
     <div id="wrap">
         <header id="header">
             <h1 class="logo">
-                <a href="index.html" aria-label="헬리녹스">
+                <a href="index.html" aria-label="헬리녹스 로고">
                     <svg version="1.1" id="logo" xmlns="http://www.w3.org/2000/svg"
                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 606 129.8"
                         style="enable-background:new 0 0 606 129.8;" xml:space="preserve">
@@ -92,11 +96,7 @@
                 <span class="line mid"></span>
                 <span class="line btm"></span>
             </button>
-                        <!-- #gnb는 modal 형식을 사용
-                1) 열기 버튼을 클릭하면 #gnb 첫번째 a에 포커스 강제 이동
-                2) 닫기 버튼을 누르기 전까지는 모달 안에서만 포커스가 움직여야함
-                3) 닫기 버튼을 누르면 처음의 위치(열기버튼)로 포커스 강제 이동-->
-        
+      
         <nav id="gnb" class="font2">
             <ul>
                 <li class="gnb1">
@@ -123,7 +123,8 @@
             </ul>
         </nav>
     </header>
-
+    
+    <div id="fullpage">
     <section id="content" role="main">
         <article class="main_visual top_visual">
             <h2 class="blind-b">헬리녹스 이야기</h2>
@@ -484,6 +485,7 @@
             </div>
         </div>
     </footer>
+    </div>
     </div>
 </body>
 </html>
