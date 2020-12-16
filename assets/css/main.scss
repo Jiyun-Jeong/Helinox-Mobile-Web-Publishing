@@ -265,7 +265,7 @@ screen and (min-resolution: 3dppx) {
         .popupImg {
             
             .bgPopup {
-                position: absolute;width: 43.33333333333333vw;height: 54.44444444444444vw;background-color: #D9D9D9;display: none;text-align: center;
+                display: none;position: absolute;width: 43.33333333333333vw;height: 54.44444444444444vw;background-color: #D9D9D9;text-align: center;
                 p {font-size: 2.777777777777778vw;line-height: 1.2;color: #000;font-family: aGothic; }
                 img {left: 0; right: 0;}
                 a {color: $brandColor;font-size: 2.777777777777778vw;}

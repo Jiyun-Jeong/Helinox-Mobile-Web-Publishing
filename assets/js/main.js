@@ -26,9 +26,6 @@ $(document).ready(function () {
   //본문3 슬라이더
   var mySwiper1 = new Swiper('.bestItem .swiper-container', {
     loop: true,
-/*     autoplay: {
-      delay: 2300,
-    }, */
     pagination: {
       el: '.swiper-pagination',
       type: 'fraction',
@@ -42,8 +39,6 @@ $(document).ready(function () {
       prevEl: '.swiper-button-prev',
     },
     a11y: {
-      //prevSlideMessage: '이전 슬라이드',
-      //nextSlideMessage: '다음 슬라이드',
       firstSlideMessage: '첫번째 슬라이드',
       lastSlideMessage: '마지막 슬라이드',
     }
