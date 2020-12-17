@@ -50,22 +50,16 @@ $(document).ready(function () {
       el: '.swiper-pagination',
       type: 'fraction',
     },
-/*     autoplay: {
-      delay: 2300,
-    }, */
-    spaceBetween: 0, //각 슬라이더 사이 공간
-    slidesPerView: 1.2, //한 화면에 보여질 슬라이더 개수 기본1
-    //centeredSlides: true, //슬라이더 가운데 중요 슬라이더 위치
+    spaceBetween: 0, 
+    slidesPerView: 1.2, 
     scrollbar: {
       el: '.swiper-scrollbar',
-      draggable: true,    //스크롤바를 직접 드래그해서 이동가능
+      draggable: true,   
     },
     navigation: {
       prevEl: '.swiper-button-prev',
     },
     a11y: {
-      //prevSlideMessage: '이전 슬라이드',
-      //nextSlideMessage: '다음 슬라이드',
       firstSlideMessage: '첫번째 슬라이드',
       lastSlideMessage: '마지막 슬라이드',
     }
@@ -79,16 +73,14 @@ $(document).ready(function () {
       bulletElement: 'span',
       clickable: 'true',
     },
-    spaceBetween: 20, //각 슬라이더 사이 공간
-    slidesPerView: 'auto', //한 화면에 보여질 슬라이더 개수 기본1
-    centeredSlides: true, //슬라이더 가운데 중요 슬라이더 위치
+    spaceBetween: 20, 
+    slidesPerView: 'auto', 
+    centeredSlides: true, 
     scrollbar: {
       el: '.swiper-scrollbar',
-      draggable: true,    //스크롤바를 직접 드래그해서 이동가능
+      draggable: true,  
     },
     a11y: {
-      //prevSlideMessage: '이전 슬라이드',
-      //nextSlideMessage: '다음 슬라이드',
       firstSlideMessage: '첫번째 슬라이드',
       lastSlideMessage: '마지막 슬라이드',
     }
