@@ -196,13 +196,10 @@ screen and (min-resolution: 3dppx) {
                 @include transform(rotate(90deg));
                 position: absolute; font-family: HvNenuBdExo; font-size: 15vw; line-height: 1.074;color: #000; 
             }
-            > img {
+            img {
                 @include transform(translate(-14.44444444444444vw, 25vw));
                 @include transition(all 1.5s);
                 max-width: none; width: 81.944444vw; 
-/*                 &:hover, &:focus {
-                    @include transform(scale(1.2));
-                } */
             }
         }
         &:nth-child(1) .categoryWrap {
