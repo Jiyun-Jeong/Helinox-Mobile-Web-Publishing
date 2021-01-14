@@ -307,7 +307,7 @@
       font-size: 15vw;
       line-height: 1.074;
       color: #000; }
-    .category .swiper-slide .categoryWrap > img {
+    .category .swiper-slide .categoryWrap img {
       -webkit-transform: translate(-14.4444444444vw, 25vw);
       transform: translate(-14.4444444444vw, 25vw);
       -webkit-transition: all 1.5s;
@@ -315,10 +315,7 @@
       -o-transition: all 1.5s;
       transition: all 1.5s;
       max-width: none;
-      width: 81.944444vw;
-      /*                 &:hover, &:focus {
-                          @include transform(scale(1.2));
-                      } */ }
+      width: 81.944444vw; }
     .category .swiper-slide:nth-child(1) .categoryWrap {
       background-color: #1EFE69; }
       .category .swiper-slide:nth-child(1) .categoryWrap h4 {
@@ -370,19 +367,7 @@
   color: #fff;
   font-family: HvNenuBdOu;
   font-size: 7.5vw;
-  line-height: 1.26;
-  /*     .swiper-slide:nth-child(1) {
-          background-image: url("../img/main/lookbook_1_1x.png")
-        } */
-  /*     .swiper-slide:nth-child(2) {
-          background-image: url("../img/main/lookbook_2_1x.png")
-        } */
-  /*     .swiper-slide:nth-child(3) {
-          background-image: url("../img/main/lookbook_3_1x.png")
-        }
-      .swiper-slide:nth-child(4) {
-          background-image: url("../img/main/lookbook_4_1x.png")
-        } */ }
+  line-height: 1.26; }
   .lookbook h3 {
     padding: 5.555555555555556vw 0 2.916666666666667vw; }
   .lookbook .swiper-slide {
@@ -434,11 +419,11 @@
       right: 22vw;
       bottom: 16vw; }
     .lookbook .swiper-slide .popupImg .bgPopup {
+      display: none;
       position: absolute;
       width: 43.33333333333333vw;
       height: 54.44444444444444vw;
       background-color: #D9D9D9;
-      display: none;
       text-align: center; }
       .lookbook .swiper-slide .popupImg .bgPopup p {
         font-size: 2.777777777777778vw;
@@ -562,17 +547,6 @@
         transition: opacity 1s 0.2s;
         opacity: 1; }
 
-/* .sub_visual {
-    background-color: #000;color: #fff;
-    .txtwrap {
-        padding-top: 75.666667vw;opacity: 0;
-        p {font-size: 3.611111111111111vw; line-height: 5vw;font-weight: 300;}
-        &.on {
-            @include transition (opacity 1s 0.2s);
-            opacity: 1;
-        }
-    }
-} */
 /* 스크롤다운으로 만났을때 about visual txt 정지, p태그 색갈 바꾸기 js */
 .bdExaplain p, .anywhere p, .gener p, .lighter p, .forHelinoxer p {
   font-size: 3.333333333333333vw; }
@@ -746,33 +720,6 @@
   .map iframe {
     padding-bottom: 34.16666666666667vw; }
 
-/* .products {
-    position: relative; min-height: 414.4444444444444vw;
-    .subtitle {
-        position: absolute; top: 50px; left: 0; right: 0;
-        min-height: 106.6666666666667vw;
-        &::before {content: ""; position: absolute; background-color: rgba(0,0,0,.55);}
-        p {font-weight: 500;font-size: 6.111111111111111vw;color: #fff;text-align: center;}
-    }
-    #productsWrap {
-        ul {float: left; 
-            li {width: 10px;}
-            > li {
-                font-size: 3.888888888888889vw;line-height: 1.6;text-decoration: underline; text-decoration-color: #707070;
-            }
-        }
-        .tabpannel {
-            p {float: left;}
-            input {float: right;}
-            .itemsWrap {
-                clear: both;
-                img {width: 42.22222222222222vw; height: 49.44444444444444vw;}
-                p {line-height: 1.64; font-size: 3.055555555555556vw;font-weight: 300;
-                }
-            }
-        }
-    }
-} */
 .products_subTit {
   -webkit-background-size: cover !important;
   background-size: cover !important;
@@ -810,23 +757,14 @@
     background-image: url("../img/products/title_1_3x.png"); } }
 .products #productsWrap {
   margin-top: 13.88888888888889vw;
-  min-height: 307.2222222222222vw;
-  /* .tabpannel.active {display: block;} */ }
+  min-height: 307.2222222222222vw; }
   .products #productsWrap ul {
     font-weight: 500;
     font-size: 3.888888888888889vw;
     text-align: center;
     padding: 3.888888888888889vw 3.055555555555556vw;
     width: 100vw;
-    height: 3.888888888888889vw;
-    /*         ul {
-                text-align: center;font-size: 3.888888888888889vw;height: 5px;
-                li {
-                    float: left; position: relative; 
-                    &::after {content:""; position: absolute; width: 100%; height: 1px;background-color: #000;}
-                }
-                li + li {padding-right: 5px;}
-            } */ }
+    height: 3.888888888888889vw; }
     .products #productsWrap ul li {
       float: left;
       margin: 0 1px;

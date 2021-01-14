@@ -68,7 +68,7 @@
             opacity: 1;
         }
         80% {
-            @include transform(translate(0, 20px/* 5.555555555555556vw */));
+            @include transform(translate(0, 20px));
             opacity: 0;
         }
         100% {
@@ -277,20 +277,7 @@ screen and (min-resolution: 3dppx) {
             #lk_popup8 {bottom: 23.388889vw; right: 3.888889vw;}
         }
     }
-/*     .swiper-slide:nth-child(1) {
-        background-image: url("../img/main/lookbook_1_1x.png")
-      } */
-/*     .swiper-slide:nth-child(2) {
-        background-image: url("../img/main/lookbook_2_1x.png")
-      } */
-/*     .swiper-slide:nth-child(3) {
-        background-image: url("../img/main/lookbook_3_1x.png")
-      }
-    .swiper-slide:nth-child(4) {
-        background-image: url("../img/main/lookbook_4_1x.png")
-      } */
     .swiper-scrollbar{
-        //position: static; position속성을 제거할 경우
         position: static;height: 0.8333333333333333vw;width: 100%;z-index: 2500;
        .swiper-scrollbar-drag{height: 2.777777777777778vw;background: $brandColor;top: -0.5555555555555556vw;}
     }
@@ -313,22 +300,22 @@ screen and (min-resolution: 3dppx) {
 //about 본문1
 .about_visual {
    position: relative;
-   .bg1 { min-height: 248.6111111111111vw; overflow: hidden;
+   .bg1 { min-height: 248.6111vw; overflow: hidden;
     &::before {
         @include transition(transform 1.5s ease-in-out);
         background-image: url("../img/about/bg1_1x.png");
     }
 }
     >.txtwrap {
-        position: fixed; text-align: center;top: 71.94444444444444vw; /* display: none; */color: #fff;width: 100%;
-        h3 {font-family: HvNenuCnO; font-size: 4.722222222222222vw; line-height: 1.3;padding-bottom: 9.444444444444444vw;}
-        strong {font-size: 8.333333333333333vw;line-height: 1.03;font-weight: 700;}
+        position: fixed; text-align: center;top: 71.9444vw; color: #fff; width: 100%;
+        h3 {font-family: HvNenuCnO; font-size: 4.7222vw; line-height: 1.3; padding-bottom: 9.4444vw;}
+        strong {font-size: 8.3333vw; line-height: 1.03; font-weight: 700;}
     }
     .sub_visual {
-        display:block; background-color: #000; color: #fff;height: 118.0555555555556vw;width: 100vw;top: 425px;
+        display:block; background-color: #000; color: #fff; height: 118.0556vw;width: 100vw; top: 425px;
         .txtwrap {
-            padding-top: 75.666667vw;opacity: 0;
-            p {font-size: 3.611111111111111vw; line-height: 5vw;font-weight: 300;}
+            padding-top: 75.6667vw; opacity: 0;
+            p {font-size: 3.6111vw; line-height: 5vw; font-weight: 300;}
             &.on {
                 @include transition (opacity 1s 0.2s);
                 opacity: 1;
@@ -336,72 +323,61 @@ screen and (min-resolution: 3dppx) {
         }
     }
 }
-/* .sub_visual {
-    background-color: #000;color: #fff;
-    .txtwrap {
-        padding-top: 75.666667vw;opacity: 0;
-        p {font-size: 3.611111111111111vw; line-height: 5vw;font-weight: 300;}
-        &.on {
-            @include transition (opacity 1s 0.2s);
-            opacity: 1;
-        }
-    }
-} */
 /* 스크롤다운으로 만났을때 about visual txt 정지, p태그 색갈 바꾸기 js */
-.bdExaplain p, .anywhere p, .gener p, .lighter p, .forHelinoxer p {font-size: 3.333333333333333vw;}
+.bdExaplain p, .anywhere p, .gener p, .lighter p, .forHelinoxer p {font-size: 3.3333vw;}
 .brandExplain {
-    position: relative;min-height: 328.6111111111111vw; color: #333;line-height: 5vw;margin-bottom: 8.333333333333333vw;
+    position: relative;min-height: 328.6111vw; color: #333; line-height: 5vw; margin-bottom: 8.3333vw;
     .bdExplain {
-        font-family: HvNenuBlk; padding-top: 33.33333333333333vw;
+        font-family: HvNenuBlk; padding-top: 33.3333vw;
         strong {
-            font-size: 13.33333333333333vw; display: block;padding-bottom: 0.6944444444444444vw; 
+            font-size: 13.3333vw; display: block; padding-bottom: 0.6944vw; 
             &::before {
-                content: ""; position: absolute; height:4.7vw;width: 1px;background-color: #333;top: 9.444444444444444vw; left: 50%;}
+                content: ""; position: absolute; height:4.7vw; width: 1px; background-color: #333; top: 9.4444vw; left: 50%;}
             &::after {
-                content: ""; position: absolute; height: 1px;width: 34.44444444444444vw;background-color: #333;top: 14.16666666666667vw; left: 31%;
+                content: ""; position: absolute; height: 1px; width: 34.4444vw; background-color: #333;top: 14.1667vw; left: 31%;
             }
         }
         span {
-            font-size: 3.888888888888889vw;padding-top: 11.94444444444444vw;display: inline-block;
+            font-size: 3.8889vw;padding-top: 11.9444vw; display: inline-block;
             &.fade.on {
                 p {@include transform(scale(1.3) 0.3s);}
             }
         }
-        span + span {padding-left: 24.44444444444444vw;}
-        p {font-family: aGothic; padding-top: 13.33333333333333vw;font-size: 3.333333333333333vw;font-weight: 500;}
+        span + span {padding-left: 24.4444vw;}
+        p {font-family: aGothic; padding-top: 13.3333vw; font-size: 3.3333vw; font-weight: 500;}
         &.fade.on {
             p {@include transform(scale(1.3) 0.5s 0.3s);}
         }
     }
     .imgWrap {
-        position: absolute; height: 200vw;top:125vw;left:0;
+        position: absolute; height: 200vw; top:125vw; left:0;
         &::before {
             @include transition(all 0.5s);
-            content:""; position:absolute; border: 1px solid #666;width: 170px;height: 298px;top: -5.277777777777778vw; left: 9.444444444444444vw;}
+            content:""; position: absolute; border: 1px solid #666;width: 170px; height: 298px; top: -5.2778vw; left: 9.4444vw;}
         img {float: left;}
         img:nth-child(1) {
-            padding-left: 4.166666666666667vw;position: relative; width: 47.22222222222222vw;
+            padding-left: 4.1667vw; position: relative; width: 47.22222222222222vw;
 
         }
-        img:nth-child(2) {float: right;width: 59.44444444444444vw;padding-right: 4.166666666666667vw;padding-bottom: 21.66666666666667vw;padding-top: 4.166666666666667vw; }
+        img:nth-child(2) {float: right; width: 59.4444vw; padding-right: 4.1667vw; padding-bottom: 21.6667vw; padding-top: 4.1667vw; }
         img:last-child {width: 100vw;}
     }
 }
 //본문3~5 공통
 .aboutTxtWrap {
-    padding: 0 6.527777777777778vw;
-    h3 {font-family: HvNenuCnO;font-size: 4.722222222222222vw;line-height: 1.3;color: $brandColor;font-weight: 300;padding-bottom: 2.222222222222222vw;}
-    strong {font-size: 8.333333333333333vw;}
-    p {padding-top: 9.444444444444444vw;font-size: 3.333333333333333vw;}
-    p + p {padding-top: 6.666666666666667vw;}   
+    padding: 0 6.5278vw;
+    h3 {font-family: HvNenuCnO; font-size: 4.7222vw;line-height: 1.3; color: $brandColor; font-weight: 300; padding-bottom: 2.2222vw;}
+    strong {font-size: 8.3333vw;}
+    p {padding-top: 9.4445vw; font-size: 3.3333vw;}
+    p + p {padding-top: 6.6667vw;}   
 }
 .aboutImgWrap {
-    img {width: 100vw;padding-top: 35.27777777777778vw;}
+    img {width: 100vw; padding-top: 35.2778vw;}
 }
 
 //본문3
 .anywhere {
-    min-height: 276.6666666666667vw; padding: 9.722222222222222vw 0; text-align: right;
+    min-height: 276.6667vw; padding: 9.7222vw 0; text-align: right;
     &.fade.on {
         strong {@include transform(scale(1.5) 0.5s);}
     }
@@ -410,13 +386,13 @@ screen and (min-resolution: 3dppx) {
 
 //본문4
 .gener {
-    min-height: 294.4444444444444vw;padding: 9.722222222222222vw 0;text-align: left;/* position: relative; */
+    min-height: 294.4444vw;padding: 9.7222vw 0;text-align: left;
     button {
         @include radius(17px);
         @include transition(all 0.3s);
-        /* position: absolute; */margin-top: 13.88888888888889vw;left: 0; right: 0; align-items: center;
-        border: 1px solid $brandColor;text-align: center;font-weight: 500;font-size: 3.611111111111111vw;height: 11.11111111111111vw;width: 46.66666666666667vw;
-        &:hover, &:focus {background-color: $brandColor;color: #fff;}
+        margin-top: 13.8889vw; left: 0; right: 0; align-items: center;
+        border: 1px solid $brandColor; text-align: center; font-weight: 500; font-size: 3.6111vw; height: 11.1111vw;width: 46.6667vw;
+        &:hover, &:focus {background-color: $brandColor; color: #fff;}
     }
     &.fade.on {
         strong {@include transform(scale(1.5) 0.5s);}
@@ -425,7 +401,7 @@ screen and (min-resolution: 3dppx) {
 
 //본문5
 .lighter {
-    min-height: 199.1666666666667vw;padding: 9.722222222222222vw 0;text-align: right;
+    min-height: 199.1667vw;padding: 9.7222vw 0; text-align: right;
     &.fade.on {
         strong {@include transform(scale(1.5) 0.5s);}
     }
@@ -433,7 +409,7 @@ screen and (min-resolution: 3dppx) {
 
 //본문6
 .forHelinoxer {
-    min-height: 75vw;padding: 9.722222222222222vw 0;text-align: left;
+    min-height: 75vw; padding: 9.7222vw 0; text-align: left;
     strong {line-height: 1.2;}
     &.fade.on {
         strong {@include transform(scale(1.5) 0.5s);}
@@ -443,9 +419,9 @@ screen and (min-resolution: 3dppx) {
 //지도
 .map {
     min-height: 67.5vw;padding-top: 35vw;text-align: center;
-    h3 {font-size: 6.111111111111111vw;line-height: 1.36;}
-    p {padding-top: 2.5vw;font-size: 3.333333333333333vw;padding-bottom: 5.277777777777778vw;}
-    iframe {padding-bottom: 34.16666666666667vw;}
+    h3 {font-size: 6.1111vw; line-height: 1.36;}
+    p {padding-top: 2.5vw; font-size: 3.3333vw; padding-bottom: 5.2778vw;}
+    iframe {padding-bottom: 34.1667vw;}
 }
 
 .products_subTit {
@@ -500,7 +476,6 @@ screen and (min-resolution: 3dppx) {
                 height: 12.22222222222222vw;width: 86.94444444444444vw;background: #000;color: #fff;font-family: Helvetica; font-size: 3.888888888888889vw;margin-top: 6.388888888888889vw;}
         }
     }
-    /* .tabpannel.active {display: block;} */
     
     }
 }

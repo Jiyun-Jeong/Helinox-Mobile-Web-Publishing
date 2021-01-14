@@ -95,9 +95,6 @@ $(document).ready(function () {
     });
 });
 
-// #goUpBtn
-    
-
 
 
 
